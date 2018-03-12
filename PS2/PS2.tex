@@ -191,29 +191,40 @@ between numbers, we'll introduce a relation $ \equiv_k $  that, intuitively, ind
 leave the same remainder when divided by $k$. For example, we'd say that $1 \equiv_{11} 12 $ and that $8 \equiv_3 11$.
 
 \begin{enumerate}[label*=\roman*.,ref=\roman*]
-\item Prove that for any integer $x$ and any integer $$ that $ x \equiv_k x $.
+\item Prove that for any integer $x$ and any integer $x$ that $ x \equiv_k x $.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-  $$ A = \{1\} \quad , \quad B = \{2\} \quad \Rightarrow \quad (A - B) \cup B = \{1\}\cup \{2\} = \{ 1 ,2 \} \neq \{1\} = A $$
+ $$ \forall x \in \mathds{Z} \quad : \quad k | x - x \quad \Rightarrow \quad x \equiv_k x $$
 \end{proof}
 \end{answer}
 \end{shaded}
 
-\item For all sets $A$, $B$, and $C$, if $ A \subseteq B \cap C$ , then $ A \subseteq B $ and $ A \subseteq C$ .
+\item Prove that for any integers $x$ and $y$ and any integer $k$ that if $x \equiv_k y$, then $y \equiv_k x$.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-  $$ \forall A , B , C \quad \text{if} \quad A \subseteq B \cap C \quad \forall x \in A \qquad \Rightarrow \qquad x \in B \quad \text{and} \quad x \in C \qquad \Rightarrow \qquad A \subseteq B \quad \text{and} \quad A \subseteq C$$
+$$ \forall x , y \in \mathds{Z} $$
+\begin{equation}\label{x , y mod k}
+x \equiv_k y \quad \Rightarrow k | x - y
+\end{equation}
+\begin{equation}\label{x - y = y - x}
+  k | x - y \quad = \quad k | y - x
+\end{equation}
+$$ \text{from} \quad \ref{x - y = y - x}, \ref{x , y mod k} \quad \Rightarrow \quad y \equiv_k x $$
 \end{proof}
 \end{answer}
 \end{shaded}
 
-\item For any set $A$, if $ A \not \subseteq \emptyset $, then $137 \in A$.
+\item Prove that for any integers $x, y$, and $z$ and any integer $k$ that if $x \equiv_k y$ and $y \equiv_k z$, then $x \equiv_k z$.
 \begin{shaded}
 \begin{answer}
-\begin{proof}[Disproof]
-  $$ A = \{1\} \quad \text{But} \quad 137 \not \in A \quad $$
+\begin{proof}
+$$ \forall x , y , x \in \mathds{Z} $$
+\begin{equation}\label{y , z mod k}
+  y \equiv_k z \quad \Rightarrow k | y - z
+\end{equation}
+$$ \text{from} \quad \ref{x , y mod k} , \ref{y , z mod k} \quad \Rightarrow \quad k | x - z \quad \Rightarrow x \equiv_k z  $$
 \end{proof}
 \end{answer}
 \end{shaded}
