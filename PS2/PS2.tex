@@ -46,13 +46,13 @@
 
 \title{
 \textsc{Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
-Discrete mathematics\\Problem Set \#1 \\
+Discrete mathematics\\Problem Set \#2 \\
 }
 \author{Ali Heydari}
 \date{\today}
 
 \lhead{Ali Heydari}
-\chead{Problem Set \#1}
+\chead{Problem Set \#2}
 \rhead{\today}
 \lfoot{}
 \cfoot{Discrete mathematics --- Winter 2018}
@@ -250,7 +250,7 @@ In the worst case, consider that senator $S$ hates a set of 3 senators, while he
 Let $\Omega$ be a set of points in the plane. Each point in $\Omega$ is a midpoint of two points in $\Omega$ . Show that $\Omega$ is an infinite set.
 \begin{shaded}
 \begin{answer}
-\paragraph*{
+
 Fist proof:
 \begin{proof}
 Suppose $\Omega$ is a finite set. Then $\Omega$ contains two points $A, B$ with
@@ -259,20 +259,18 @@ Figure
 %\ref{figure 1}
  shows that $ |AC| > |AB|$ or $|AD| > |AB|$.
 \end{proof}
-}
+
 %\begin{figure}[h]
 %\includegraphics[scale=0.35]{figure1}
 %\label{figure 1}
 %\caption{}
 %\end{figure}
 
-\paragraph*{
 \begin{proof}
 We consider all points in $\Omega$ farthest to the left, and among those
 the point $M$ farthest down. $M$ cannot be a midpoint of two points $A,B \in \Omega $ since
 one element of $\{A,B\}$ would be either left of $M$ or on the vertical below $M$.
 \end{proof}
-}
 \end{answer}
 \end{shaded}
 
@@ -291,16 +289,49 @@ A plain is colored blue  and red in any way. prove that there exists a rectangle
 Prove that having 100 whole numbers, one can choose 15 of them so that the difference of any two is divisible by 7
 \begin{shaded}
 \begin{proof}
-For the difference to be a multiple of 7, the integers must have equal modulo 7 residues. To avoid having 15 with the same residue, 14 numbers with different modulo 7 residues can be picked ($14 * 7 = 98$). Thus, two numbers are left over and have to share a modulo 7 residue with the other numbers under the pigeonhole principle
+For the difference to be a multiple of 7, the integers must have equal modulo 7 residues. To avoid having 15 with the same residue, 14 numbers with different modulo 7 residues can be picked ($14 * 7 = 98$). Thus, two numbers are left over and have to share a modulo 7 residue with the other numbers under the pigeonhole principle.
 \end{proof}
 \end{shaded}
 
-\section{}
-
+\section{Contradiction every where}
+$2n + 1$ persons are placed in the plane so their mutual distances are all distinct. Then everyone
+shoots his nearest neighbor. Prove that (a) at least one person survives (b) nobody is hit by more than
+5 bullets (c) the set of segments formed by the bullet paths does not contain a closed polygon.
 \begin{shaded}
+\begin{answer}
+$$  $$
 \begin{proof}
+(a) All mutual distances are different. Hence there exist two persons $A$ and $B$ with
+minimum distance. These two persons will shoot each other. If any other person
+shoots at $A$ or $B$, someone will survive since $A$ and $B$ have used up three bullets. If
+not, we can ignore $A$ and $B$. We are left with the same problem with n replaced by
+$n − 1$. Repeating the argument, we either find a pair at whom three shots are fired,
+or if not, we arrive, finally, at three persons, and for this case $(n = 1)$, the theorem
+is obvious.
+\end{proof}
+\begin{proof}
+(b) Suppose the persons $A,B,C,D, . . . $ shoot at $P$ (Fig. 3.12). $A$ shoots at $P$ and
+not at $B$, so $|AP| < |AB|$. $B$ shoots at $P$ and not at $A$, so $|BP| < |AB|$. Thus, $AB$ is
+the largest side in the triangle $A\,B\,P$. The largest angle lies opposite the largest side.
+Hence, $\gamma > \alpha, \gamma > \beta$ or $2\gamma > \alpha + \beta, 3\gamma > \alpha + \beta + \gamma ,\gamma > 60^{\circ}$. Thus any two
+bullet paths meeting at $P$ make an angle greater than $60^{\circ}$. Since $6 × 60^{\circ} 360^{\circ}$,
+five bullet paths at most can meet at $P$.
 
 \end{proof}
+\begin{proof}
+(c) Suppose the paths of two bullets cross with $A$ shooting at $B$ and $C$ shooting
+at $D$ (Fig. 3.13). Then $|AB| < |AD|$ and $|CD| < |CB|\quad $ imply $\quad |AB| + |CD| <
+|AD| + |CB|$. On the other hand, by the triangle inequality, $ \quad |AS| + |SD| > |AD| \quad $
+and $ \quad |BS| + |SC| > |BC| \quad \Rightarrow \quad |AB| + |CD| > |AD| + |BC|$. Contradiction!
+\end{proof}
+\begin{proof}
+  (d) Suppose there is a closed polygon $ABCDE \dots  MN$  (Fig. 3.14) . Let $|AN| <
+|AB|$, that is, $N$ is the nearest neighbor of $A$. Then $|AB| < |BC|, |BC| < |CD|,
+|CD| < |DE|, . . ., |MN| < |NA|$, that is, $|AB| < |NA|$. Contradiction! The
+assumption $|AN| > |AB|$ also leads to a contradiction.
+\end{proof}
+
+\end{answer}
 \end{shaded}
 
 \end{document} 
