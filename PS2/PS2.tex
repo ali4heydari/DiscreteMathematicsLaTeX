@@ -231,7 +231,7 @@ $$ \text{from} \quad \ref{x , y mod k} , \ref{y , z mod k} \quad \Rightarrow \qu
 
 
 \end{enumerate}
-\section{Pigeonhole Principle }
+\section{Pigeonhole Principle 1}
 \paragraph*{
 There are 51 senators in a senate. The senate needs to be divided into $n$ committees such that each senator is on exactly one committee. Each senator hates exactly three other senators.(If senator $A$ hates senator $B$, then senator $B$ does $’not'$ necessarily hate senator $A$.)
 }
@@ -246,135 +246,61 @@ In the worst case, consider that senator $S$ hates a set of 3 senators, while he
 \end{answer}
 \end{shaded}
 
-\section{Case proof}
+\section{Pigeonhole Principle 2}
+Let $\Omega$ be a set of points in the plane. Each point in $\Omega$ is a midpoint of two points in $\Omega$ . Show that $\Omega$ is an infinite set.
+\begin{shaded}
+\begin{answer}
+\paragraph*{
+Fist proof:
+\begin{proof}
+Suppose $\Omega$ is a finite set. Then $\Omega$ contains two points $A, B$ with
+maximal distance $|AB|  = m $. $B$ is a midpoint of some segment $C $ $ D $ with $C$, $ D  \in \Omega $.
+Figure
+%\ref{figure 1}
+ shows that $ |AC| > |AB|$ or $|AD| > |AB|$.
+\end{proof}
+}
+%\begin{figure}[h]
+%\includegraphics[scale=0.35]{figure1}
+%\label{figure 1}
+%\caption{}
+%\end{figure}
+
+\paragraph*{
+\begin{proof}
+We consider all points in $\Omega$ farthest to the left, and among those
+the point $M$ farthest down. $M$ cannot be a midpoint of two points $A,B \in \Omega $ since
+one element of $\{A,B\}$ would be either left of $M$ or on the vertical below $M$.
+\end{proof}
+}
+\end{answer}
+\end{shaded}
+
+\section{Problem 5}
+A plain is colored blue  and red in any way. prove that there exists a rectangle with vertices of same color.
 
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-  $$ C - (A\cap B)  \, = \, C \cap (A \cap B)' \, = \, C \cap ( A' \cup B' ) \,
-  = \, (C \cap A' ) \cup (C \cap B' ) \, = \, ( C - A ) \cup ( C - B )  $$
+
 \end{proof}
 \end{answer}
 \end{shaded}
 
-\section{$n \times n$ chessboard}
-Consider an $ n \times n $ chessboard with the four corners removed. For which values of $n$ can you cover the board with L- tetrominoes as in Figure. \ref{fig1}?
-\begin{figure}[h]
-\includegraphics[scale=0.5]{fig1}
-\caption{}
-\label{fig1}
-\end{figure}
+\section{Pigeonhole Principle 3}
+Prove that having 100 whole numbers, one can choose 15 of them so that the difference of any two is divisible by 7
 \begin{shaded}
-\begin{answer}
 \begin{proof}
-There are $ n^2 — 4 $squares on the board. To cover it with tetrominoes $ n^2 — 4 $ must be a multiple of 4, i.c., n must be even. But this is not sufficient. To sec this, we color the board as in Figure. \ref{fig2} An L-tetromino covers three white and one black squares or three black and one white squares. Since there is an equal number of black and white squares on the board, any complete covering uses an equal number of tetrominoes of each kind. Hence, it uses an even number of tetrominoes, that is, $n^2 — 4$ must be a multiple of 8. So, n must have the form $4k + 2$. By actual construction, it is easy to sec that the condition $4k + 2$ is also sufficient.
-\end{proof}
-\end{answer}
-\end{shaded}
-\begin{figure}[h]
-\includegraphics[scale=0.35]{fig2}
-\caption{}
-\label{fig2}
-\end{figure}
-
-\section{Properties of Sets}
-
-Here are some claims about properties of sets. Some of them are true and some of them are false. For each true statement, write a proof that the statement is true. For each false statement, write a \textit{\textbf{disproof}} of the statement (take a look at the Proofwriting Checklist for information about how to write a disproof.) You can use any proof techniques you'd like.
-\begin{enumerate}[label*=\roman*.,ref=\roman*]
-
-\item Prove or disprove: for all sets $A$, $B$, and $C$,
-if $A \in B$ and $B \in C$, then $A \in C$.
-
-\textit{\textcolor{blue}{ This is your first example of a ``prove or disprove'' problem.
-Part of the challenge of approaching a problem like this one is that you'll need to figure out whether or not the statement is even true in the first place, since if it's true you'll want to prove it and if it's false you'll want to disprove it. }}
-
-\textit{\textcolor{blue}{ Here are two strategies for approaching problems like these.
-First, try out a lot of examples! You'll want to
-get a feel for what the symbolic expression above ``feels'' like in practice. Second, get a sheet of scratch paper
-and write out both the statement and its negation. One of those statements is true, and your task is to
-figure out which one it is. Once you have those two statements, think about what you would need to do to
-prove each of them. In each case, what would you be assuming? What would you need to prove? If you
-can answer those questions, you can explore both options and seeing which one ends up panning out. }}
-
-\begin{shaded}
-\begin{proof}[Disproof]
-$$ A =\{1\} \quad , \quad B=\{\{1\},2\} \quad , \quad  C = \{\{\{1\},2\} , 3\} $$
-$$ A \in B \quad \text{and} \quad B \in C \quad \text{But} \quad A \not \in C \qquad \text{\textreferencemark}  $$
-
+For the difference to be a multiple of 7, the integers must have equal modulo 7 residues. To avoid having 15 with the same residue, 14 numbers with different modulo 7 residues can be picked ($14 * 7 = 98$). Thus, two numbers are left over and have to share a modulo 7 residue with the other numbers under the pigeonhole principle
 \end{proof}
 \end{shaded}
 
-\item Prove or disprove: for all sets $A$, $B$, and $C$, if $A \subseteq B$ and $A \subseteq C$, then $A \subseteq B \cap C$.
+\section{}
 
 \begin{shaded}
 \begin{proof}
-\begin{equation}\label{equ1}
- \text{if} \quad A \subseteq B \quad \Rightarrow \quad \forall x \in A \quad \Rightarrow \quad x \in B
-\end{equation}
-\begin{equation}\label{equ2}
-\text{if} \quad A \subseteq C \quad \Rightarrow \quad \forall x \in A \quad \Rightarrow \quad x \in C
-\end{equation}
-$\\$
- $$\qquad \ref{equ1} , \ref{equ2} \quad \Rightarrow \forall x \in A \quad \Rightarrow (x \in B) \wedge (x \in C) \quad \Rightarrow \quad A \subseteq (B \cap C) $$
 
 \end{proof}
 \end{shaded}
-
-\item Prove or disprove: for all sets $A$, $B$, and $C$, if $A \subsetneq B$ and $A \subsetneq C$, then $A \subsetneq B \cap C$. (The notation $A \subsetneq B$ says that $A$ is a \textit{\textbf{strict subset}} of $B$, meaning that $A \subseteq B$ and $A \neq B$.)
-
-\begin{shaded}
-\begin{proof}
-  $$ \text{if} \quad A \subseteq (B \cap C) \quad \Rightarrow \quad (A \subseteq B) \wedge (A \subseteq C) \qquad \text{\textreferencemark} $$
-\end{proof}
-\end{shaded}
-
-\item Prove or disprove: there exists a set $A$ where $\wp(A) = \{A\}$.
-
-\begin{shaded}
--
-\end{shaded}
-
-\item Prove or disprove: for all sets $A$ and $B$,
-if $\wp(A) = \wp(B)$, then $A = B$.
-
-\textit{\textcolor{blue}{ Look back at Wednesday's lecture. What's a good general way to prove that two sets are equal? }}
-
-\begin{shaded}
-\begin{proof}
- $ A = \{1\} \quad B = \{2\} \\
-  \Rightarrow \wp(A) = \{ 1, \{1\}\} \quad , \quad \wp(B) = \{ 2, \{2\}\} \quad \text{But} \quad A \neq B \qquad \text{\textreferencemark}$
-\end{proof}
-\end{shaded}
-
-\end{enumerate}
-
-\textit{\textcolor{blue}{ Before you turn in these proofs, be sure to read over the Proofwriting Checklist and to go one item at a
-time through each of your proofs. Here are a few specific things to look for:
-\begin{itemize}
-\item Make sure that the structures of your proofs match the definitions of the relevant terms. For example,
-to prove that a set $S$ is a subset of a set $T$, follow the pattern from lecture: pick an arbitrary
-$x \in S$, then prove that $x \in T$ by making specific claims about $x$.
-\item However, avoid restating definitions in the abstract. For example, rather than writing
-\begin{center}
-``We know that $S \subseteq T$ if every element of $S$ is an element of $T$. \\
-Therefore, since we know that $A \subseteq B$ and $x \in A$, we see that $x \in B$.''
-\end{center}
-instead remove that first sentence and just write something like this:
-\begin{center}
-``Since $x \in A$ and $A \subseteq B$, we see that $x \in B$.''
-\end{center}
-Whoever is reading your proof knows all the relevant definitions. They're more interested in seeing
-\textbf{how those definitions interact with one another} than \textbf{what those definitions are}.
-\item Make sure you clearly indicate what each variable means and whether it's chosen arbitrarily or
-chosen to have a specific value. For example, in your answers, if you refer to variables like A, B,
-or C, you should clearly indicate whether they?re chosen arbitrarily or refer to specific values.
-\item If you're talking about an arbitrary set A, it's often tempting to try to list of the elements of A by
-writing something like $A = \{ x_1, x_2, \ldots, x_n \}$. The problem with this approach is that by writing
-$A = \{ x_1, x_2, \ldots, x_n \}$, you're implicitly saying that the set $A$ is finite, since you're claiming it only
-has $n$ elements in it. This is a problem if $A$ is an infinite set. In fact, if $A$ is infinite, because of
-Cantor's theorem you can't necessarily even write $A = \{ x_1, x_2, x_3, \ldots \}$, since you might run out of
-natural numbers with which to name the elements of $A$ without having listed all of them!
-\end{itemize}
-}}
 
 \end{document} 
