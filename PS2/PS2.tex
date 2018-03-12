@@ -206,7 +206,7 @@ leave the same remainder when divided by $k$. For example, we'd say that $1 \equ
 \begin{proof}
 $$ \forall x , y \in \mathds{Z} $$
 \begin{equation}\label{x , y mod k}
-x \equiv_k y \quad \Rightarrow k | x - y
+x \equiv_k y \quad \Rightarrow \quad k | x - y
 \end{equation}
 \begin{equation}\label{x - y = y - x}
   k | x - y \quad = \quad k | y - x
@@ -222,7 +222,7 @@ $$ \text{from} \quad \ref{x - y = y - x}, \ref{x , y mod k} \quad \Rightarrow \q
 \begin{proof}
 $$ \forall x , y , x \in \mathds{Z} $$
 \begin{equation}\label{y , z mod k}
-  y \equiv_k z \quad \Rightarrow k | y - z
+  y \equiv_k z \quad \Rightarrow \quad k | y - z
 \end{equation}
 $$ \text{from} \quad \ref{x , y mod k} , \ref{y , z mod k} \quad \Rightarrow \quad k | x - z \quad \Rightarrow x \equiv_k z  $$
 \end{proof}
@@ -231,23 +231,17 @@ $$ \text{from} \quad \ref{x , y mod k} , \ref{y , z mod k} \quad \Rightarrow \qu
 
 
 \end{enumerate}
-\section{Prove }
-Prove the statement bellow:
-$$ \text{if} \quad 0 \leq x \leq 2, \quad \text{then} \quad -x^3 + 4x + 1 > 0. $$
+\section{Pigeonhole Principle }
+\paragraph*{
+There are 51 senators in a senate. The senate needs to be divided into $n$ committees such that each senator is on exactly one committee. Each senator hates exactly three other senators.(If senator $A$ hates senator $B$, then senator $B$ does $’not'$ necessarily hate senator $A$.)
+}
+\paragraph*{
+Find the smallest $n$ such that it is always possible to arrange the committees so that no senator hates another senator on his or her committee.
+}
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-$$ x(4 - x^2) + 1 > 0 \quad \Rightarrow \quad \overbrace{x(2-x)(2+x)}^{f(x)} + 1 > 0 $$
-$$ f(x) + 1 > 0 \quad \Rightarrow \quad f(x) > -1 \quad \Rightarrow $$
-\begin{tabular}{ccccc}
-
-  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-  x  &\vline  &-2  &0  &2 \\
-  \hline
-  f(x)   &\vline \quad + &\vline \quad - &\vline \quad +  & \vline \quad  - \\
-
-\end{tabular}
- $ \qquad \Rightarrow \qquad $ if $ \quad 0 \leq x \leq 2 \quad \rightarrow \quad f(x) > 0 > -1 $
+In the worst case, consider that senator $S$ hates a set of 3 senators, while he himself is hated by a completely different set of 3 other senators. Thus, given one senator, there may be a maximum of 6 other senators whom he cannot work with. If we have a minimum of 7 committees, there should be at least one committee suitable for the senator $S$ after the assignment of the 6 conflicting senators.
 \end{proof}
 \end{answer}
 \end{shaded}
