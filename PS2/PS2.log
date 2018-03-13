@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.29)  13 MAR 2018 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.29)  13 MAR 2018 18:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1099,16 +1099,16 @@ e
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-37.0pt
@@ -1116,7 +1116,7 @@ e
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
+* \marginparwidth=57.0pt
 * \marginparsep=11.0pt
 * \columnsep=0.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -1192,31 +1192,36 @@ ap}]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [2] <images/Problem4Fig1.png, id=73, 149.358pt x 109.6095pt>
+ <images/Problem4Fig1.png, id=60, 149.358pt x 109.6095pt>
 File: images/Problem4Fig1.png Graphic file (type png)
 
 <use images/Problem4Fig1.png>
 Package pdftex.def Info: images/Problem4Fig1.png used on input line 279.
 (pdftex.def)             Requested size: 149.35762pt x 109.6092pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2]
 Missing character: There is no â in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ’ in font cmr10!
  [3 <./images/Problem4Fig1.png>]
-<images/Problem7Fig1.png, id=81, 114.4275pt x 102.98476pt>
+<images/Problem7Fig1.png, id=82, 114.4275pt x 102.98476pt>
 File: images/Problem7Fig1.png Graphic file (type png)
 
 <use images/Problem7Fig1.png>
 Package pdftex.def Info: images/Problem7Fig1.png used on input line 349.
 (pdftex.def)             Requested size: 80.0987pt x 72.08882pt.
 
-<images/Problem7Fig2.png, id=82, 87.9285pt x 112.62074pt>
+<images/Problem7Fig2.png, id=83, 87.9285pt x 112.62074pt>
 File: images/Problem7Fig2.png Graphic file (type png)
 
 <use images/Problem7Fig2.png>
 Package pdftex.def Info: images/Problem7Fig2.png used on input line 355.
 (pdftex.def)             Requested size: 61.54951pt x 78.83397pt.
 
-<images/Problem7Fig3.png, id=83, 106.59825pt x 97.5645pt>
+<images/Problem7Fig3.png, id=84, 106.59825pt x 97.5645pt>
 File: images/Problem7Fig3.png Graphic file (type png)
 
 <use images/Problem7Fig3.png>
@@ -1230,14 +1235,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `PS2.out' has not changed.
-(rerunfilecheck)             Checksum: F6DBEA8517A15621216D08D8A2664D6E;394.
+(rerunfilecheck)             Checksum: 2A1C3DDB23477F51EDC0C3920161E9E4;394.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
- 22009 strings out of 492995
- 394717 string characters out of 6127076
- 473406 words of memory out of 5000000
- 25094 multiletter control sequences out of 15000+600000
+ 22011 strings out of 492995
+ 394756 string characters out of 6127076
+ 472367 words of memory out of 5000000
+ 25096 multiletter control sequences out of 15000+600000
  25353 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  59i,11n,94p,427b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1260,7 +1265,7 @@ s/type1/public/cm-super/sfcc1728.pfb><c:/Program Files (x86)/texlive/2017/texmf
 Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c
 :/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1
 000.pfb>
-Output written on PS2.pdf (4 pages, 199794 bytes).
+Output written on PS2.pdf (4 pages, 199871 bytes).
 PDF statistics:
  146 PDF objects out of 1000 (max. 8388607)
  119 compressed objects within 2 object streams
