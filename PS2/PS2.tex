@@ -34,6 +34,11 @@
 \usepackage{hyperref}
 \usepackage{dsfont}
 
+
+\usepackage{wrapfig}
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{0pt}
+\usepackage{subcaption}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
@@ -255,16 +260,11 @@ Fist proof:
 \begin{proof}
 Suppose $\Omega$ is a finite set. Then $\Omega$ contains two points $A, B$ with
 maximal distance $|AB|  = m $. $B$ is a midpoint of some segment $C $ $ D $ with $C$, $ D  \in \Omega $.
-Figure
-%\ref{figure 1}
+Figure.
+\ref{Problem4Fig1}
  shows that $ |AC| > |AB|$ or $|AD| > |AB|$.
 \end{proof}
 
-%\begin{figure}[h]
-%\includegraphics[scale=0.35]{figure1}
-%\label{figure 1}
-%\caption{}
-%\end{figure}
 
 \begin{proof}
 We consider all points in $\Omega$ farthest to the left, and among those
@@ -273,6 +273,12 @@ one element of $\{A,B\}$ would be either left of $M$ or on the vertical below $M
 \end{proof}
 \end{answer}
 \end{shaded}
+
+\begin{figure}[h]
+\centering
+\includegraphics{Problem4Fig1}
+\caption{}\label{Problem4Fig1}
+\end{figure}
 
 \section{Pigeonhole Principle 3}
 A plain is colored blue  and red in any way. prove that there exists a rectangle with vertices of same color.
@@ -314,28 +320,48 @@ or if not, we arrive, finally, at three persons, and for this case $(n = 1)$, th
 is obvious.
 \end{proof}
 \begin{proof}
-(b) Suppose the persons $A,B,C,D, . . . $ shoot at $P$ (Fig. 3.12). $A$ shoots at $P$ and
+(b) Suppose the persons $A,B,C,D, . . . $ shoot at $P$ (Figure. \ref{Problem7Fig1}). $A$ shoots at $P$ and
 not at $B$, so $|AP| < |AB|$. $B$ shoots at $P$ and not at $A$, so $|BP| < |AB|$. Thus, $AB$ is
 the largest side in the triangle $A\,B\,P$. The largest angle lies opposite the largest side.
 Hence, $\gamma > \alpha, \gamma > \beta$ or $2\gamma > \alpha + \beta, 3\gamma > \alpha + \beta + \gamma ,\gamma > 60^{\circ}$. Thus any two
-bullet paths meeting at $P$ make an angle greater than $60^{\circ}$. Since $6 × 60^{\circ} 360^{\circ}$,
+bullet paths meeting at $P$ make an angle greater than $60^{\circ}$. Since $6 \times 60^{\circ} 360^{\circ}$,
 five bullet paths at most can meet at $P$.
 
 \end{proof}
 \begin{proof}
 (c) Suppose the paths of two bullets cross with $A$ shooting at $B$ and $C$ shooting
-at $D$ (Fig. 3.13). Then $|AB| < |AD|$ and $|CD| < |CB|\quad $ imply $\quad |AB| + |CD| <
+at $D$ (Figure. \ref{Problem7Fig2}). Then $|AB| < |AD|$ and $|CD| < |CB|\quad $ imply $\quad |AB| + |CD| <
 |AD| + |CB|$. On the other hand, by the triangle inequality, $ \quad |AS| + |SD| > |AD| \quad $
 and $ \quad |BS| + |SC| > |BC| \quad \Rightarrow \quad |AB| + |CD| > |AD| + |BC|$. Contradiction!
 \end{proof}
 \begin{proof}
-  (d) Suppose there is a closed polygon $ABCDE \dots  MN$  (Fig. 3.14) . Let $|AN| <
+  (d) Suppose there is a closed polygon $ABCDE \dots  MN$  (Figure. \ref{Problem7Fig3}) . Let $|AN| <
 |AB|$, that is, $N$ is the nearest neighbor of $A$. Then $|AB| < |BC|, |BC| < |CD|,
 |CD| < |DE|, . . ., |MN| < |NA|$, that is, $|AB| < |NA|$. Contradiction! The
 assumption $|AN| > |AB|$ also leads to a contradiction.
 \end{proof}
-
 \end{answer}
 \end{shaded}
+\begin{figure}[h]
+  \centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[scale = 0.7]{Problem7Fig1}
+\caption{}\label{Problem7Fig1}
+\end{subfigure}
+
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[scale = 0.7]{Problem7Fig2}
+\caption{}\label{Problem7Fig2}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+\centering
+\includegraphics[scale = 0.7]{Problem7Fig3}
+\caption{}\label{Problem7Fig3}
+\end{subfigure}
+\caption{} \label{Problem7 Figures}
+\end{figure}
+
 
 \end{document} 

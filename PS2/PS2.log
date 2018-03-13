@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.29)  13 MAR 2018 10:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/W32TeX) (preloaded format=pdflatex 2018.1.29)  13 MAR 2018 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,49 +1000,81 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 45.
-\c@theorem=\count167
-\c@corollary=\count168
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen347
+\WF@size=\dimen348
+\c@WF@wrappedlines=\count167
+\WF@box=\box79
+\WF@everypar=\toks45
+Package: wrapfig 2003/01/31  v 3.6
+)
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/caption/subcaption.st
+y
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
+ (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+(c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen349
+\captionmargin@=\dimen350
+\captionwidth=\dimen351
+\caption@tempdima=\dimen352
+\caption@indent=\dimen353
+\caption@parindent=\dimen354
+\caption@hangindent=\dimen355
+)
+\c@ContinuedFloat=\count168
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: wrapfig package is loaded.
+)
+\c@subfigure=\count169
+\c@subtable=\count170
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 50.
+\c@theorem=\count171
+\c@corollary=\count172
  (./PS2.aux)
 \openout1 = `PS2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 151.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 151.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 156.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 156.
 
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 151.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 151.
-LaTeX Font Info:    ... okay on input line 151.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count169
-\scratchdimen=\dimen347
-\scratchbox=\box79
-\nofMPsegments=\count170
-\nofMParguments=\count171
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count172
-\MPscratchDim=\dimen348
-\MPnumerator=\count173
-\makeMPintoPDFobject=\count174
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count173
+\scratchdimen=\dimen356
+\scratchbox=\box80
+\nofMPsegments=\count174
+\nofMParguments=\count175
+\everyMPshowfont=\toks46
+\MPscratchCnt=\count176
+\MPscratchDim=\dimen357
+\MPnumerator=\count177
+\makeMPintoPDFobject=\count178
+\everyMPtoPDFconversion=\toks47
 )
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-bas
 e.sty
@@ -1086,7 +1118,7 @@ e
 * \footskip=30.0pt
 * \marginparwidth=65.0pt
 * \marginparsep=11.0pt
-* \columnsep=10.0pt
+* \columnsep=0.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
@@ -1097,8 +1129,8 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count175
-\AtBeginShipoutBox=\box80
+\c@lstlisting=\count179
+\AtBeginShipoutBox=\box81
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/oberdiek/pdflscape.st
 y
@@ -1112,7 +1144,7 @@ Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-Package hyperref Info: Link coloring ON on input line 151.
+Package hyperref Info: Link coloring ON on input line 156.
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1121,31 +1153,33 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count176
+\c@section@level=\count180
 )
-LaTeX Info: Redefining \ref on input line 151.
-LaTeX Info: Redefining \pageref on input line 151.
-LaTeX Info: Redefining \nameref on input line 151.
+LaTeX Info: Redefining \ref on input line 156.
+LaTeX Info: Redefining \pageref on input line 156.
+LaTeX Info: Redefining \nameref on input line 156.
  (./PS2.out) (./PS2.out)
 \@outlinefile=\write4
 \openout4 = `PS2.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 154.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 159.
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 154.
+LaTeX Font Info:    Try loading font information for U+msb on input line 159.
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 154.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 159.
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 198.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 203.
 
 
 (c:/Program Files (x86)/texlive/2017/texmf-dist/tex/latex/doublestroke/udsrom.f
@@ -1158,30 +1192,55 @@ ap}]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [2]
+ [2] <images/Problem4Fig1.png, id=73, 149.358pt x 109.6095pt>
+File: images/Problem4Fig1.png Graphic file (type png)
+
+<use images/Problem4Fig1.png>
+Package pdftex.def Info: images/Problem4Fig1.png used on input line 279.
+(pdftex.def)             Requested size: 149.35762pt x 109.6092pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no ˆ in font cmr10!
 Missing character: There is no ’ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no — in font cmr10!
- [3] [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
+ [3 <./images/Problem4Fig1.png>]
+<images/Problem7Fig1.png, id=81, 114.4275pt x 102.98476pt>
+File: images/Problem7Fig1.png Graphic file (type png)
+
+<use images/Problem7Fig1.png>
+Package pdftex.def Info: images/Problem7Fig1.png used on input line 349.
+(pdftex.def)             Requested size: 80.0987pt x 72.08882pt.
+
+<images/Problem7Fig2.png, id=82, 87.9285pt x 112.62074pt>
+File: images/Problem7Fig2.png Graphic file (type png)
+
+<use images/Problem7Fig2.png>
+Package pdftex.def Info: images/Problem7Fig2.png used on input line 355.
+(pdftex.def)             Requested size: 61.54951pt x 78.83397pt.
+
+<images/Problem7Fig3.png, id=83, 106.59825pt x 97.5645pt>
+File: images/Problem7Fig3.png Graphic file (type png)
+
+<use images/Problem7Fig3.png>
+Package pdftex.def Info: images/Problem7Fig3.png used on input line 360.
+(pdftex.def)             Requested size: 74.61826pt x 68.29466pt.
+ [4 <./images/Problem7Fig1.png> <./images/Problem7Fig2.png> <./images/Problem7F
+ig3.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 367.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 367.
  (./PS2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 367.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 367.
 Package rerunfilecheck Info: File `PS2.out' has not changed.
 (rerunfilecheck)             Checksum: F6DBEA8517A15621216D08D8A2664D6E;394.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 341.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 367.
  ) 
 Here is how much of TeX's memory you used:
- 20822 strings out of 492995
- 373196 string characters out of 6127076
- 451005 words of memory out of 5000000
- 23929 multiletter control sequences out of 15000+600000
- 24588 words of font info for 77 fonts, out of 8000000 for 9000
+ 22009 strings out of 492995
+ 394717 string characters out of 6127076
+ 473406 words of memory out of 5000000
+ 25094 multiletter control sequences out of 15000+600000
+ 25353 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,54p,427b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,11n,94p,427b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-s
 uper-t1.enc}<c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmmi10.pfb><c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/ty
@@ -1195,14 +1254,16 @@ ogram Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/doublestroke/dsrom
 per/sfbx1000.pfb><c:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/pu
 blic/cm-super/sfbx1440.pfb><c:/Program Files (x86)/texlive/2017/texmf-dist/font
 s/type1/public/cm-super/sfcc1728.pfb><c:/Program Files (x86)/texlive/2017/texmf
--dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/Program Files (x86)/texlive/
-2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Program Files (x86
-)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c:/Program 
-Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on PS2.pdf (4 pages, 176339 bytes).
+-dist/fonts/type1/public/cm-super/sfrm0900.pfb><c:/Program Files (x86)/texlive/
+2017/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb><c:/Program Files (x86
+)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/Program 
+Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb><c
+:/Program Files (x86)/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfti1
+000.pfb>
+Output written on PS2.pdf (4 pages, 199794 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
- 21 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 146 PDF objects out of 1000 (max. 8388607)
+ 119 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 
