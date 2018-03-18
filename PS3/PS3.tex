@@ -182,7 +182,7 @@ ANSWER HERE.
 \begin{itemize}
   \item[] \textit{Person(p)}, which states that $p$ is a person;
   \item[] \textit{Kitten(k)}, which states that $k$ is a kitten; and
-  \item[] \textit{HasPet(o, p)}, which states that $o$ has $p$ as a pet, 
+  \item[] \textit{HasPet(o, p)}, which states that $o$ has $p$ as a pet,
 \end{itemize}
 write an FOL statement that says "someone has exactly two pet kittens and no other pets."
 \begin{shaded}
@@ -220,7 +220,7 @@ ANSWER HERE.
 \item[] \textit{Lady(x)}, which states that $x$ is a lady;
 \item[] \textit{Glitters(x)}, which states that $x$ glitters;
 \item[] \textit{SureIsGold(x, v)}, which states that $x$ is sure that $y$ is gold;
-\item[] \textit{Buying(x, v)}, which states that $x$ buys $y$; and 
+\item[] \textit{Buying(x, v)}, which states that $x$ buys $y$; and
 \item[] \textit{StuirwayToHeaven(A)}, which states that $x$ is a Stairway to Heaven;
 \end{itemize}
 write a statement in first-order logic that says "there's a lady who's sure all that glitters is gold, and she's buying a Stairway to Heaven."
@@ -314,7 +314,21 @@ language $l$, and $German(y)$ , meaning that $y$ is a $German$ person.
 \begin{shaded}
 \begin{answer}
 %\begin{proof}
-PROOF HERE.
+\begin{equation*}
+  \forall x , y , l \quad \left(German(x) \wedge German(y) \wedge Speaks (x,l) \quad \Rightarrow \quad Speaks(y,l) \right)
+\end{equation*}
+
+\begin{equation*}
+  \forall x , y \quad \left(German(x) \wedge German(y)   \quad \Rightarrow \quad \forall l \quad (Speaks (x,l) \quad \Leftrightarrow \quad Speaks(y,l)) \right)
+\end{equation*}
+
+\begin{equation*}
+.
+\end{equation*}
+
+\begin{equation*}
+.
+\end{equation*}
 %\end{proof}
 \end{answer}
 \end{shaded}
