@@ -331,6 +331,15 @@ What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \t
 
 \begin{shaded}
 \begin{answer}
+ANSWER HERE.
+\end{answer}
+\end{shaded}
+
+\section{Describing the predicates}
+Write axioms describing the predicates: $GrandChild$, $GreatGrandparent$, $Brother$, $Sister$, $Daughter$, $Son$, $Aunt$, $Uncle$, $BrotherInLaw$, $SisterInLaw$ and $FirstCousin$. Find out the proper definition of math cousin $n$ times removed, and write the definition in first-order logic.
+\begin{shaded}
+\begin{answer}
+$$ $$
 \begin{itemize}
   \item $ GrandChild(a,b) \quad \Rightarrow \quad parent(b,x) \wedge parent(x,a) $
   \item $ GreatGrandparent(a,b) \quad \Rightarrow \quad parent(a,x) \wedge GrandChild(b,x) $
@@ -353,14 +362,6 @@ What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \t
   \item $ SisterInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,'female') $
   \item $ FirstCousin(a,b) \quad \Rightarrow \quad parent(x,a) \wedge parent(y,b) \wedge Sibling(x,y) $
 \end{itemize}
-\end{answer}
-\end{shaded}
-
-\section{Describing the predicates}
-Write axioms describing the predicates: $GrandChild$, $GreatGrandparent$, $Brother$, $Sister$, $Daughter$, $Son$, $Aunt$, $Uncle$, $BrotherInLaw$, $SisterInLaw$ and $FirstCousin$. Find out the proper definition of math cousin $n$ times removed, and write the definition in first-order logic.
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
 \end{answer}
 \end{shaded}
 
