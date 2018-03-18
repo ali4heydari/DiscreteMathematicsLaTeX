@@ -317,18 +317,11 @@ language $l$, and $German(y)$ , meaning that $y$ is a $German$ person.
 \begin{equation*}
   \forall x , y , l \quad \left(German(x) \wedge German(y) \wedge Speaks (x,l) \quad \Rightarrow \quad Speaks(y,l) \right)
 \end{equation*}
-
+or
 \begin{equation*}
   \forall x , y \quad \left(German(x) \wedge German(y)   \quad \Rightarrow \quad \forall l \quad (Speaks (x,l) \quad \Leftrightarrow \quad Speaks(y,l)) \right)
 \end{equation*}
 
-\begin{equation*}
-.
-\end{equation*}
-
-\begin{equation*}
-.
-\end{equation*}
 %\end{proof}
 \end{answer}
 \end{shaded}
@@ -338,7 +331,28 @@ What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \t
 
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{itemize}
+  \item $ GrandChild(a,b) \quad \Rightarrow \quad parent(b,x) \wedge parent(x,a) $
+  \item $ GreatGrandparent(a,b) \quad \Rightarrow \quad parent(a,x) \wedge GrandChild(b,x) $
+  \item The Sibling relationship is added to make the expression of some future relationships simpler. In this situation, Sibling encompasses full, half and step siblings.
+      \begin{itemize}
+        \item $ Sibling(a,b) \quad \Rightarrow \quad  parent(x,a) \wedge parent(x,b) \wedge not_equal(a,b) $
+        \item $ Sibling(a,b) \quad \Rightarrow \quad Sibling(b,a) $
+      \end{itemize}
+  \item $Brother(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,'male')$
+  \item $Sister(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,'female')$
+  \item $Son(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,'male')$
+  \item $ Daughter(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,'female')$
+  \item $ Uncle(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,'male') $
+  \item $ Aunt(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,'female') $
+  \item married is a primitive relation, meaning it is not defined in terms of any other relations. It is necessary however to note that it is reflexive.
+      \begin{itemize}
+        \item $married(a,b) \quad \Rightarrow \quad married(b,a)$
+      \end{itemize}
+  \item $ BrotherInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,'male') $
+  \item $ SisterInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,'female') $
+  \item $ FirstCousin(a,b) \quad \Rightarrow \quad parent(x,a) \wedge parent(y,b) \wedge Sibling(x,y) $
+\end{itemize}
 \end{answer}
 \end{shaded}
 
