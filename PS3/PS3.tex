@@ -51,13 +51,13 @@
 
 \title{
 \textsc{Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
-Discrete mathematics\\Problem Set \#2 \\
+Discrete mathematics\\Problem Set \#3 \\
 }
 \author{Ali Heydari}
 \date{\today}
 
 \lhead{Ali Heydari}
-\chead{Problem Set \#2}
+\chead{Problem Set \#3}
 \rhead{\today}
 \lfoot{}
 \cfoot{Discrete mathematics --- Winter 2018}
@@ -161,28 +161,41 @@ Discrete mathematics\\Problem Set \#2 \\
 In each of the following, write a statement in first-order logic that expresses the indicated sentence. Your statement may use any first-order construct (equality, connectives, quantifiers, etc.), but you must only use the predicates, functions, and constants provided. You do not need to provide the simplest formula possible, though we'd appreciate it if you made an effort to do so.
 \begin{enumerate}[label*=\roman*.,ref=\roman*]
 
+\item Given the predicates
+\begin{itemize}
+\item[] \textit{Natural(x)}, which states that $x$ is an natural number
+\end{itemize}
+and the functions
+\begin{itemize}
+\item[] $x + y$, which represents the sum of $x$ and $y$, and
+\item[] $x . y $, which represents the product of $x$ and $y$
+\end{itemize}
+
+write a statement in first-order logic that says "for any $n \in \mathds{N} $ , n is even if and only if $n^2$ is even."
+\begin{shaded}
+\begin{answer}
+ANSWER HERE.
+\end{answer}
+\end{shaded}
+
 \item Given the predicate
+\begin{itemize}
+  \item[] \textit{Person(p)}, which states that $p$ is a person;
+  \item[] \textit{Kitten(k)}, which states that $k$ is a kitten; and
+  \item[] \textit{HasPet(o, p)}, which states that $o$ has $p$ as a pet, 
+\end{itemize}
+write an FOL statement that says "someone has exactly two pet kittens and no other pets."
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\item Given the predicates \\
-Natural(x), which states that x is an natural number \\
-and the functions \\
-x + v, which represents the sum of .v and y, \\
-and .v • y, which represents the product of x and y \\
-write a statement in first-order logic that says "for any n € N, n is even if and only if rr is even."
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
-
-\item The axiom of pairing is the following statement: given any two distinct objects x and y, there's a set containing x and y and nothing else. Given the predicates \\
-    A e y, which states that x is an element of y, and  \\
-    St7(S), which states that S is a set, \\
+\item The \textbf{\textit{axiom of pairing}} is the following statement: given any two distinct objects $x$ and $y$, there's a set containing $x$ and $y$ and nothing else. Given the predicates
+\begin{itemize}
+  \item[] $x \in y$, which states that $x$ is an element of $y$, and
+  \item[] \textit{Set(S)}, which states that $S$ is a set,
+\end{itemize}
     write a statement in first-order logic that expresses the axiom of pairing.
 \begin{shaded}
 \begin{answer}
@@ -190,9 +203,11 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\item Given the predicates \\
-A e y, which states that A is an element of y, and Set(S),  \\
-which states that S is a set, \\
+\item Given the predicates
+\begin{itemize}
+\item[] $x \in  y$, which states that $x$ is an element of $y$, and
+\item[] \textit{Set(S)}, which states that $S$ is a set,
+\end{itemize}
 write a statement in first-order logic that says "every set has a power set."
 \begin{shaded}
 \begin{answer}
@@ -200,12 +215,14 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\item Given the predicates \\
-Lady(x), which states that A is a lady; \\
-Glitters(x), which states that x glitters; \\
-SureIsGold(x, v), which states that A is sure that y is gold; \\
-Buying(x, v), which states that x buys y; and StuirwayToHeaven(A),  \\
-which states that A is a Stairway to Heaven; \\
+\item Given the predicates
+\begin{itemize}
+\item[] \textit{Lady(x)}, which states that $x$ is a lady;
+\item[] \textit{Glitters(x)}, which states that $x$ glitters;
+\item[] \textit{SureIsGold(x, v)}, which states that $x$ is sure that $y$ is gold;
+\item[] \textit{Buying(x, v)}, which states that $x$ buys $y$; and 
+\item[] \textit{StuirwayToHeaven(A)}, which states that $x$ is a Stairway to Heaven;
+\end{itemize}
 write a statement in first-order logic that says "there's a lady who's sure all that glitters is gold, and she's buying a Stairway to Heaven."
 \begin{shaded}
 \begin{answer}
@@ -303,7 +320,7 @@ PROOF HERE.
 \end{shaded}
 
 \section{Jim \& Laura}
-What axiom is needed to infer the fact Female(Laura) given the facts Male(Jim) and Spouse(Jim, Laura)?
+What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \textit{Male(Jim)} and \textit{Spouse(Jim, Laura)}?
 
 \begin{shaded}
 \begin{answer}
@@ -319,7 +336,7 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{Humanoid wolf }
+\section{Humanoid wolf}
 QUESTION HERE.
 \begin{enumerate}[label*=\roman*.,ref=\roman*]
 
