@@ -157,79 +157,128 @@ Discrete mathematics\\Problem Set \#3 \\
 
 \maketitle
 
-\section{Give the predicates}
-In each of the following, write a statement in first-order logic that expresses the indicated sentence. Your statement may use any first-order construct (equality, connectives, quantifiers, etc.), but you must only use the predicates, functions, and constants provided. You do not need to provide the simplest formula possible, though we'd appreciate it if you made an effort to do so.
+\section{Translating into Logic}
+\textit{\textbf{(We will cover the material necessary to solve this problem on Monday. You can also read over the Guide to
+First-Order Translations, which covers all the skills you'll need.)}} \\
+
+In each of the following,
+you will be given a list of first-order predicates and functions
+along with an English sentence.
+In each case,
+write a statement in first-order logic that expresses
+the indicated sentence.
+Your statement may use any first-order construct
+(equality, connectives, quantifiers, etc.),
+but you \textbf{\textit{must}} only use the predicates, functions,
+and constants provided.
+You do not need to provide the simplest formula
+possible, though we'd appreciate it if you made an effort to do so.
+\smiley \ We \textit{\textbf{highly}} recommend reading the
+Guide to First-Order Logic Translations before starting this problem.
 \begin{enumerate}[label*=\roman*.,ref=\roman*]
-
-\item Given the predicates
-\begin{itemize}
-\item[] \textit{Natural(x)}, which states that $x$ is an natural number
-\end{itemize}
-and the functions
-\begin{itemize}
-\item[] $x + y$, which represents the sum of $x$ and $y$, and
-\item[] $x . y $, which represents the product of $x$ and $y$
-\end{itemize}
-
-write a statement in first-order logic that says "for any $n \in \mathds{N} $ , n is even if and only if $n^2$ is even."
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
-
 \item Given the predicate
-\begin{itemize}
-  \item[] \textit{Person(p)}, which states that $p$ is a person;
-  \item[] \textit{Kitten(k)}, which states that $k$ is a kitten; and
-  \item[] \textit{HasPet(o, p)}, which states that $o$ has $p$ as a pet,
-\end{itemize}
-write an FOL statement that says "someone has exactly two pet kittens and no other pets."
+
+\qquad $\textit{Natural}(x)$,
+which states that $x$ is an natural number
+
+and the functions
+
+\qquad $x + y$, which represents the sum of $x$ and $y$, and
+
+\qquad $x \cdot y$, which represents the product of $x$ and $y$
+
+write a statement in first-order logic that says
+``for any $n \in \N$, $n$ is even if and only if
+$n^2$ is even.''
+
+\textit{\textcolor{blue}{Try translating this statement assuming you have a predicate Even(x). Then, rewrite your solution without
+using Even(x). Numbers aren't a part of FOL, so you can't use the number 2 in your solution.}}
+
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+Write your answer here.
 \end{answer}
 \end{shaded}
-
-\item The \textbf{\textit{axiom of pairing}} is the following statement: given any two distinct objects $x$ and $y$, there's a set containing $x$ and $y$ and nothing else. Given the predicates
-\begin{itemize}
-  \item[] $x \in y$, which states that $x$ is an element of $y$, and
-  \item[] \textit{Set(S)}, which states that $S$ is a set,
-\end{itemize}
-    write a statement in first-order logic that expresses the axiom of pairing.
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
-
 \item Given the predicates
-\begin{itemize}
-\item[] $x \in  y$, which states that $x$ is an element of $y$, and
-\item[] \textit{Set(S)}, which states that $S$ is a set,
-\end{itemize}
-write a statement in first-order logic that says "every set has a power set."
+
+\qquad $\textit{Person}(p)$,
+which states that $p$ is a person;
+
+\qquad $\textit{Kitten}(k)$,
+which states that $k$ is a kitten; and
+
+\qquad $\textit{HasPet}(o, p)$,
+which states that $o$ has $p$ as a pet,
+
+write a statement in first-order logic that says
+``someone has exactly two pet kittens and no other
+pets.''
+
+\textit{\textcolor{blue}{ Make sure your formula requires that the person
+have \textit{exactly} two pet kittens; look at the lecture example of
+uniqueness as a starting point. Good questions to ask --
+is your formula false if everyone has exactly one pet
+kitten? Is it false if everyone has exactly three pet kittens? }}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+Write your answer here.
 \end{answer}
 \end{shaded}
+\item The \textbf{\textit{axiom of pairing}}
+is the following statement:
+given any two distinct objects $x$ and $y$,
+there's a set containing $x$ and $y$ and nothing else.
+Given the predicates
 
+\qquad $x \in y$, which states that $x$ is an element of $y$, and
+
+\qquad $\textit{Set}(S)$, which states that $S$ is a set,
+
+write a statement in first-order logic that expresses the axiom of pairing.
+\begin{shaded}
+\begin{answer}
+Write your answer here.
+\end{answer}
+\end{shaded}
 \item Given the predicates
-\begin{itemize}
-\item[] \textit{Lady(x)}, which states that $x$ is a lady;
-\item[] \textit{Glitters(x)}, which states that $x$ glitters;
-\item[] \textit{SureIsGold(x, v)}, which states that $x$ is sure that $y$ is gold;
-\item[] \textit{Buying(x, v)}, which states that $x$ buys $y$; and
-\item[] \textit{StuirwayToHeaven(A)}, which states that $x$ is a Stairway to Heaven;
-\end{itemize}
-write a statement in first-order logic that says "there's a lady who's sure all that glitters is gold, and she's buying a Stairway to Heaven."
+
+\qquad $x \in y$, which states that $x$ is an element of $y$, and
+
+\qquad $\textit{Set}(S)$, which states that $S$ is a set,
+
+write a statement in first-order logic that says
+``every set has a power set.''
+
+\textit{\textcolor{blue}{ As a warm-up, solve this problem assuming you have a predicate
+$X \subseteq Y$ that says that X is a subset of Y.
+Once you have that working, see if you can solve the full version of this problem. }}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+Write your answer here.
 \end{answer}
 \end{shaded}
+\item Given the predicates
 
+\qquad $\textit{Lady}(x)$, which states that $x$ is a lady;
+
+\qquad $\textit{Glitters}(x)$, which states that $x$ glitters;
+
+\qquad $\textit{SureIsGold}(x, y)$,
+which states that $x$ is sure that $y$ is gold;
+
+\qquad $\textit{Buying}(x, y)$, which states that $x$ buys $y$; and
+
+\qquad $\textit{StairwayToHeaven}(x)$,
+which states that $x$ is a Stairway to Heaven;
+
+write a statement in first-order logic that says
+``there's a lady who's sure all that glitters is gold,
+and she's buying a Stairway to Heaven.''
+\begin{shaded}
+\begin{answer}
+Write your answer here.
+\end{answer}
+\end{shaded}
 \end{enumerate}
 
 \section{Consistent vocabulary}
@@ -258,7 +307,8 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \begin{answer}
 \begin{align*}
     \exists x , \exists y , \forall z &: \\
- & Student(x) \wedge Greek(y) \wedge TakeInSpring2001 \wedge \underbrace{(Student(z) \wedge TakeInSpring2001(z,y))}_{x = z}
+ & Student(x) \wedge Greek(y) \wedge TakeInSpring2001 \\
+ &\wedge (Student(z) \wedge TakeInSpring2001(z,y) \quad \Rightarrow \quad x = z)
 \end{align*}
 \end{answer}
 \end{shaded}
@@ -267,7 +317,7 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \begin{shaded}
 \begin{answer}
 \begin{equation*}
-  \forall s \exists x \forall y Score(x,Greek, s) > Score(y,French, s).
+  \forall s, \, \exists x : \, \forall y \, \, Score(x,Greek, s) > Score(y,French, s).
 \end{equation*}
 \end{answer}
 \end{shaded}
@@ -295,7 +345,7 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \begin{shaded}
 \begin{answer}
 \begin{equation*}
- \exists x Agent(x) \wedge \forall y, z Policy(y) \wedge Sells(x, y, z) \quad \Rightarrow \quad (Person(z)\wedge \neg Insured(z)).
+ \exists x \, : \, Agent(x) \wedge \forall y, z \,  Policy(y) \wedge Sells(x, y, z) \quad \Rightarrow \quad (Person(z)\wedge \neg Insured(z)).
 \end{equation*}
 \end{answer}
 \end{shaded}
@@ -304,7 +354,7 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \begin{shaded}
 \begin{answer}
 \begin{equation*}
-  \exists x \quad Barber(x) \wedge \forall y \quad Man(y) \wedge \neg Shaves(y, y) \quad \Rightarrow \quad Shaves(x, y).
+  \exists x \, : \, Barber(x) \wedge \forall y \, : \, Man(y) \wedge \neg Shaves(y, y) \quad \Rightarrow \quad Shaves(x, y).
 \end{equation*}
 \end{answer}
 \end{shaded}
@@ -333,7 +383,7 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \begin{shaded}
 \begin{answer}
 \begin{align*}
-  \forall x Politician(x) & : \\
+  \forall x \, : \, Politician(x) & : \\
    &\Rightarrow \quad (\exists y \, \forall t \, Person(y) \wedge Fools(x, y, t)) \wedge (\exists t \, \forall y \, Person(y) \\
   & \Rightarrow \quad Fools(x, y, t)) \wedge \neg (\forall t \, \forall y \, Person(y) \Rightarrow \quad Fools(x, y, t))
 \end{align*}
