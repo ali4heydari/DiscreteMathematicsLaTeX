@@ -238,21 +238,28 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \item Some students took French in spring 2001.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{equation*}
+  \exists x , \exists y \quad : \quad Student(x) \wedge French(y) \wedge TakeInSpring2001(x,y)
+\end{equation*}
 \end{answer}
 \end{shaded}
 
 \item Every student who takes French passes it.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{equation*}
+  \forall x , \forall y \quad : \quad \left( Student(x) \wedge French(y) \wedge Take(x,y) \right) \quad \Rightarrow \quad Pass(x,y)
+\end{equation*}
 \end{answer}
 \end{shaded}
 
 \item Only one student took Greek in spring 2001.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+    \exists x , \exists y , \forall z &: \\
+ & Student(x) \wedge Greek(y) \wedge TakeInSpring2001 \wedge \underbrace{(Student(z) \wedge TakeInSpring2001(z,y))}_{x = z}
+\end{align*}
 \end{answer}
 \end{shaded}
 
@@ -345,21 +352,21 @@ $$ $$
   \item $ GreatGrandparent(a,b) \quad \Rightarrow \quad parent(a,x) \wedge GrandChild(b,x) $
   \item The Sibling relationship is added to make the expression of some future relationships simpler. In this situation, Sibling encompasses full, half and step siblings.
       \begin{itemize}
-        \item $ Sibling(a,b) \quad \Rightarrow \quad  parent(x,a) \wedge parent(x,b) \wedge not_equal(a,b) $
+        \item $ Sibling(a,b) \quad \Rightarrow \quad  parent(x,a) \wedge parent(x,b) \wedge not\_equal(a,b) $
         \item $ Sibling(a,b) \quad \Rightarrow \quad Sibling(b,a) $
       \end{itemize}
-  \item $Brother(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,'male')$
-  \item $Sister(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,'female')$
-  \item $Son(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,'male')$
-  \item $ Daughter(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,'female')$
-  \item $ Uncle(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,'male') $
-  \item $ Aunt(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,'female') $
+  \item $Brother(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,\text{`male'})$
+  \item $Sister(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,\text{`female'})$
+  \item $Son(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,\text{`male'})$
+  \item $ Daughter(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,\text{`female'})$
+  \item $ Uncle(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,\text{`male'}) $
+  \item $ Aunt(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,\text{`female'}) $
   \item married is a primitive relation, meaning it is not defined in terms of any other relations. It is necessary however to note that it is reflexive.
       \begin{itemize}
         \item $married(a,b) \quad \Rightarrow \quad married(b,a)$
       \end{itemize}
-  \item $ BrotherInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,'male') $
-  \item $ SisterInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,'female') $
+  \item $ BrotherInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,\text{`male'}) $
+  \item $ SisterInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,\text{`female'}) $
   \item $ FirstCousin(a,b) \quad \Rightarrow \quad parent(x,a) \wedge parent(y,b) \wedge Sibling(x,y) $
 \end{itemize}
 \end{answer}
