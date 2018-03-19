@@ -266,49 +266,77 @@ Represent the following sentences in first-order logic, using a consistent vocab
 \item The best score in Greek is always higher than the best score in French.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{equation*}
+  \forall s \exists x \forall y Score(x,Greek, s) > Score(y,French, s).
+\end{equation*}
 \end{answer}
 \end{shaded}
 
 \item Every person who buys a policy is smart.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{equation*}
+  \forall x \quad : \quad Person(x) \wedge (\exists y : Policy(y) \wedge Buys(x,y) ) \quad \Rightarrow \quad Smart(x)
+\end{equation*}
 \end{answer}
 \end{shaded}
 
 \item No person buys an expensive policy.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+  \forall x, y & : \\
+   & \quad Person(x) \wedge Policy(y)  \wedge Expensive(y) \quad \Rightarrow \quad  \neg Buys(x, y)
+\end{align*}
 \end{answer}
 \end{shaded}
 
 \item There is an agent who sells policies only to people who are not insured.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{equation*}
+ \exists x Agent(x) \wedge \forall y, z Policy(y) \wedge Sells(x, y, z) \quad \Rightarrow \quad (Person(z)\wedge \neg Insured(z)).
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item There is a barber who shaves all men in town who do not shave themselves.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \exists x \quad Barber(x) \wedge \forall y \quad Man(y) \wedge \neg Shaves(y, y) \quad \Rightarrow \quad Shaves(x, y).
+\end{equation*}
 \end{answer}
 \end{shaded}
 
 \item A person born in the UK. each of whose parents is a UK citizen or a UK resident, is a UK citizen by birth.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+  \forall x \, Person(x) \wedge Born(x,UK) \wedge (\forall y \, Parent(y, x)  &\Rightarrow  ((\exists r \, Citizen(y,UK, r)) \vee Resident(y,UK))) \\
+  &\Rightarrow \quad Citizen(x,UK,Birth).
+\end{align*}
 \end{answer}
 \end{shaded}
 
 \item A person born outside the UK, one of whose parents is a UK citizen by birth, is a UK citizen by descent.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+&\forall x \, Person(x) \wedge \neg Born(x,UK) \wedge (\exists y \, Parent(y, x) \wedge Citizen(y,UK,Birth)) \\
+& \Rightarrow \quad Citizen(x,UK,Descent).
+\end{align*}
 \end{answer}
 \end{shaded}
 
 \item Politicians can fool some of the people all of the time, and they can fool all of the people some of the time, but they can't fool all of the people all of the time.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+  \forall x Politician(x) & : \\
+   &\Rightarrow \quad (\exists y \, \forall t \, Person(y) \wedge Fools(x, y, t)) \wedge (\exists t \, \forall y \, Person(y) \\
+  & \Rightarrow \quad Fools(x, y, t)) \wedge \neg (\forall t \, \forall y \, Person(y) \Rightarrow \quad Fools(x, y, t))
+\end{align*}
 \end{answer}
 \end{shaded}
 
