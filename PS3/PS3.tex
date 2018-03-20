@@ -195,7 +195,9 @@ using Even(x). Numbers aren't a part of FOL, so you can't use the number 2 in yo
 
 \begin{shaded}
 \begin{answer}
-Write your answer here.
+\begin{align*}
+\forall x Natural(x) : ( \exists Natural(y) : x = y + y \quad \Leftrightarrow \quad \exists Natural(z) : x \cdot x = z + z)
+\end{align*}
 \end{answer}
 \end{shaded}
 \item Given the predicates
@@ -220,7 +222,11 @@ is your formula false if everyone has exactly one pet
 kitten? Is it false if everyone has exactly three pet kittens? }}
 \begin{shaded}
 \begin{answer}
-Write your answer here.
+\begin{align*}
+&\exists p \, Person(p) \quad \exists x \, Kitten(x) \quad \exists y \, Kitten(y) \\
+&\Bigl((x \neq y\wedge HasPet(p,k) \wedge HasPet(p,y)) \wedge \forall z Kitten(z) (HasPet(p,z) \\
+&\Rightarrow \quad (z=x \vee z=y)) \wedge \forall j ((j \neq x) \wedge (j \neq y)) \Bigr)
+\end{align*}
 \end{answer}
 \end{shaded}
 \item The \textbf{\textit{axiom of pairing}}
@@ -236,7 +242,9 @@ Given the predicates
 write a statement in first-order logic that expresses the axiom of pairing.
 \begin{shaded}
 \begin{answer}
-Write your answer here.
+\begin{align*}
+ \forall x , y \quad  \Bigl(\exists s \, Set(s) : (x \in s) \wedge (y \in s) \wedge \forall z \, (z \in s \quad \Rightarrow \quad  (z=x \vee z=y))\Bigr)
+\end{align*}
 \end{answer}
 \end{shaded}
 \item Given the predicates
@@ -253,7 +261,9 @@ $X \subseteq Y$ that says that X is a subset of Y.
 Once you have that working, see if you can solve the full version of this problem. }}
 \begin{shaded}
 \begin{answer}
-Write your answer here.
+\begin{align*}
+  \forall s \, Set(s) \quad ( \exists p \, Set(p)  \quad (p \in s))
+\end{align*}
 \end{answer}
 \end{shaded}
 \item Given the predicates
@@ -275,7 +285,9 @@ write a statement in first-order logic that says
 and she's buying a Stairway to Heaven.''
 \begin{shaded}
 \begin{answer}
-Write your answer here.
+\begin{align*}
+  \exists l \, Lady(l) \Bigl(\forall g Glitters(g)\wedge (SureIsGold(l,g)) \wedge \bigl(\exists x \, StairwayToHeaven(x)\wedge (Buying(l,x))\bigr)\Bigr)
+\end{align*}
 \end{answer}
 \end{shaded}
 \end{enumerate}
