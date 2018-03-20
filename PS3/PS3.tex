@@ -106,7 +106,7 @@ Discrete mathematics\\Problem Set \#3 \\
 \DeclareMathOperator{\ASPACE}{\mathbf{ASPACE}}
 \DeclareMathOperator{\NSPACE}{\mathbf{NSPACE}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
-\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\N}{\mathds{N}}
 \DeclareMathOperator{\EXP}{\mathbf{EXP}}
 \DeclareMathOperator{\NEXP}{\mathbf{NEXP}}
 \DeclareMathOperator{\NTIME}{\mathbf{NTIME}}
@@ -172,8 +172,7 @@ Your statement may use any first-order construct
 but you \textbf{\textit{must}} only use the predicates, functions,
 and constants provided.
 You do not need to provide the simplest formula
-possible, though we'd appreciate it if you made an effort to do so.
-\smiley \ We \textit{\textbf{highly}} recommend reading the
+possible, though we'd appreciate it if you made an effort to do so. We \textit{\textbf{highly}} recommend reading the
 Guide to First-Order Logic Translations before starting this problem.
 \begin{enumerate}[label*=\roman*.,ref=\roman*]
 \item Given the predicate
@@ -393,8 +392,8 @@ Represent the following sentences in first-order logic, using a consistent vocab
 
 \end{enumerate}
 \section{Germans}
- Represent the sentence "All Germans speak the same
-languages" in predicate calculus. Use $Speaks(x,l)$, meaning that person $x$ speaks
+ Represent the sentence ``All Germans speak the same
+languages'' in predicate calculus. Use $Speaks(x,l)$, meaning that person $x$ speaks
 language $l$, and $German(y)$ , meaning that $y$ is a $German$ person.
 \begin{shaded}
 \begin{answer}
@@ -416,7 +415,9 @@ What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \t
 
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{align*}
+\forall x , y \quad Spouse(x,y) \wedge Male(x) \quad \Rightarrow \quad Female(y)
+\end{align*}
 \end{answer}
 \end{shaded}
 
@@ -474,7 +475,7 @@ S = \{ A , B , C \} \\
 \begin{shaded}
 \begin{answer}
 \begin{align*}
-\forall x \in S : x \neg IsHumanoidWolf(x) \quad \Rightarrow \quad 
+\forall x \in S : x \neg IsHumanoidWolf(x) \quad \Rightarrow \quad
 \end{align*}
 \end{answer}
 \end{shaded}
@@ -518,8 +519,8 @@ S = \{ A , B , C \} \\
 \begin{answer}
 \begin{align*}
  Fact &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
-  Fact &: \quad \exists y , z \in S : (y , z \neq x ) \wedge Lier(y) \wedge Lier(z) \\
-  B &: \quad IsHumanoidWolf(C)
+ Fact &: \quad \exists y , z \in S : (y , z \neq x ) \wedge Lier(y) \wedge Lier(z) \\
+ B &: \quad IsHumanoidWolf(C)
 \end{align*}
 \end{answer}
 \end{shaded}
