@@ -473,7 +473,7 @@ Suppose you enter a forest in which a lot of people live. Anyone in this forest 
 \begin{shaded}
 \begin{answer}
 
-\textit{Lier(x)}, which states that $x$ is a Lier. 
+\textit{Lier(x)}, which states that $x$ is a Lier.
 \textit{HumanoidWolf(x)}, which states that $x$ is a HumanoidWolf
 \begin{align*}
 &S = \{ A , B , C \} \\
@@ -508,24 +508,26 @@ C: & (Lier(A) \wedge Lier(B)) \vee (Lier(A) \wedge Lier(C)) \vee (Lier(B) \wedge
 Do you think which on is humanoid wolf?
 \begin{shaded}
 \begin{answer}
-\begin{align*}
+\begin{align}
   A  &: \quad \exists x \in S : \quad Lier(x) \\
   B &: \quad \exists x \in S : \quad \neg Lier(x) \\
   Fact &: \quad \exists x \in S : \quad HumanoidWolf(x) \\
-  Fact &: \quad \exists x \in S : \quad \neg (\neg Lier(x) \wedge HumanoidWolf(x)) \\
+  Fact &: \quad \exists x \in S : \quad \neg (\neg Lier(x) \wedge HumanoidWolf(x))
+  \end{align}
+  \begin{align*}
   \\
-  &\Rightarrow
+  \Rightarrow
   \begin{cases}
     \not \exists x \in S : \quad \neg Lier(x) \qquad \text{\textreferencemark}, & \mbox{if } Lier(B) \\
     \begin{cases}
       \not \exists x \in S : \quad Lier(x) \wedge \neg Lier(B) \text{\textreferencemark}, & \mbox{if } Lier(A) \\
-      \\
       \neg HumanoidWolf(C), & \mbox{if } Lier(C) \\
       Lier(A) \; \text{\textreferencemark}, & \mbox{otherwise} (Lier(A) \wedge Lier(C)).
     \end{cases}, & \mbox{otherwise}.
-    \\
-    \Rightarrow HumanoidWolf(C)
   \end{cases}
+\end{align*}
+\begin{align*}
+\Rightarrow \quad  HumanoidWolf(C)
 \end{align*}
 \end{answer}
 \end{shaded}
@@ -535,10 +537,19 @@ We also know that one and only one of these three are humanoid wolfs, and that o
  Which of these three is humanoid wolf?
 \begin{shaded}
 \begin{answer}
-\begin{align*}
+\begin{align}
   A &: \quad \exists x \in S : \quad Lier(x) \\
   B &: \quad \neg Lier(C) \\
-  Fact &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
+  Fact \label{Fact HumanoidWolf is honest} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
+\end{align}
+\begin{align*}
+    \\
+ \Rightarrow
+  \begin{cases}
+    \neg Lier(A) \; \text{\textreferencemark}, & \mbox{if } Lier(A) \\
+    \neg Lier(A) \wedge \ref{Fact HumanoidWolf is honest}, & \mbox{otherwise}.
+  \end{cases}
+ \quad \Rightarrow \quad HumaoidWolf(A)
 \end{align*}
 \end{answer}
 \end{shaded}
@@ -547,18 +558,23 @@ We also know that one and only one of these three are humanoid wolfs, and that o
 Can you tell him who?
 \begin{shaded}
 \begin{answer}
-\begin{align*}
+\begin{align}
  A &:  \exists x \in S : \quad Lier(x) \\
  B &: HumanoidWolf(C) \\
-  Fact &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
-  \\
-  & \Rightarrow
+  Fact &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
+\end{align}
+\begin{align*}
+& \Rightarrow
+\begin{cases}
+  \neg Lier(A) \; \text{\textreferencemark}, \\
+   & \mbox{if } Lier(A) \\
   \begin{cases}
-    \neg Lier(A) \; \text{\textreferencemark}, & \mbox{if } Lier(A) \\
-    \neg Lier(A) \wedge Fact, & \mbox{otherwise}.
- \\
- &\Rightarrow \quad HumaoidWolf(A)
-  \end{cases}
+    Lier(C), & \mbox{if } Lier(B) \\
+    Lier(C), & \mbox{if } Lier(C) \\
+    Lier(B) \wedge Lier(C), & \mbox{otherwise}.
+  \end{cases}, & \mbox{otherwise}.
+\end{cases}
+\quad \Rightarrow \quad HumanoidWolf(A)
 \end{align*}
 \end{answer}
 \end{shaded}
@@ -568,15 +584,15 @@ Can you tell him who?
 \begin{shaded}
 \begin{answer}
 \begin{align}
- Fact \label{Fact 1} &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
- Fact \label{Fact 2} &: \quad \exists y , z \in S : (y , z \neq x ) \wedge Lier(y) \wedge Lier(z) \\
+ Fact \label{Fact HumanoidWolf is honest 2} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
+ Fact \label{There is only one lier} &: \quad \exists y , z \in S : (y , z \neq x ) \wedge Lier(y) \wedge Lier(z) \\
  B &: \quad IsHumanoidWolf(C)
 \end{align}
 \begin{align*}
 &\Rightarrow \quad
 \begin{cases}
-  HumanoidWolf(C) \wedge \ref{Fact 2} \; \text{\textreferencemark}, & \mbox{if } \neg Lier(B) \\
-  \neg HumaoidWolf(C) \wedge \ref{Fact 1} \; \text{\textreferencemark}, & \mbox{otherwise}.
+  HumanoidWolf(C) \wedge \ref{There is only one lier} \; \text{\textreferencemark}, & \mbox{if } \neg Lier(B) \\
+  \neg HumaoidWolf(C) \wedge \ref{Fact HumanoidWolf is honest 2} \; \text{\textreferencemark}, & \mbox{otherwise}.
 \end{cases}
   \quad \Rightarrow \quad HumanoidWolf(A)
 \end{align*}
