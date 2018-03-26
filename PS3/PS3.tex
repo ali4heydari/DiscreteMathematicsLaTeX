@@ -561,7 +561,7 @@ Can you tell him who?
 \begin{align}
  A &:  \exists x \in S : \quad Lier(x) \\
  B &: HumanoidWolf(C) \\
-  Fact &: \quad \exists x \in S : \quad (\forall y \in S : \quad IsHumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
+  Fact \label{HumanoidWolf is truthful} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
 \end{align}
 \begin{align*}
 & \Rightarrow
@@ -574,7 +574,7 @@ Can you tell him who?
     Lier(B) \wedge Lier(C), & \mbox{otherwise}.
   \end{cases}, & \mbox{otherwise}.
 \end{cases}
-\quad \Rightarrow \quad HumanoidWolf(A)
+\wedge \ref{HumanoidWolf is truthful} \quad \Rightarrow \quad HumanoidWolf(A)
 \end{align*}
 \end{answer}
 \end{shaded}
