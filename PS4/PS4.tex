@@ -218,7 +218,15 @@ Prove the claim.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-PROOF HERE.
+\textbf{Base case}: $n = 4$. Two \$2 bills.
+
+\textbf{Induction step}: suppose the machine can already handle $n \geq 4$ dollars.
+How do we proceed for $n+1$ dollars?
+
+\textbf{Case 1: }  The $n$ dollar output contains a \$5. Then we can replace the \$5 by three \$2's to get $ n+1$ dollars.
+ 
+ \textbf{Case 2: } The $n$ dollar output contains only \$2 bills. Since $n \geq 4$, there must be at least two \$2 bills. Remove two, and replace them by one \$5.
+
 \end{proof}
 \end{answer}
 \end{shaded}
