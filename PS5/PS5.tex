@@ -1,0 +1,266 @@
+% IN THE NAME OF GOD
+% LaTeX Problem Set Template by Sachin Padmanabhan edited by Ali Heydari
+% I created this when I was a freshman in CS 103,
+% and I continue to use it to this day.
+%
+% Hope you enjoy!
+%
+% There may be problems with this template.
+% If so, feel free to contact me.
+%
+
+\documentclass[a4paper]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathdots}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{multicol}
+\usepackage{bm}
+\usepackage{listings}
+\PassOptionsToPackage{usenames,dvipsnames}{color}  %% Allow color names
+\usepackage{pdfpages}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage{dsfont}
+
+
+\usepackage{wrapfig}
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{0pt}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\title{
+\textsc{Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
+Discrete mathematics\\Problem Set \#2 \\
+}
+\author{Ali Heydari}
+\date{\today}
+
+\lhead{Ali Heydari}
+\chead{Problem Set \#2}
+\rhead{\today}
+\lfoot{}
+\cfoot{Discrete mathematics --- Winter 2018}
+\rfoot{\thepage}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\absfit}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\eval}[3]{\left[#1\right]_{#2}^{#3}}
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\inner}[1]{\langle#1\rangle}
+\newcommand{\cond}{\bigg|}
+\newcommand{\rank}[1]{\mathbf{rank}(#1)}
+\newcommand{\range}[1]{\mathbf{range}(#1)}
+\newcommand{\nullsp}[1]{\mathbf{null}(#1)}
+\newcommand{\repr}[1]{\left\langle#1\right\rangle}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{\mathbf{Tr}}
+\DeclareMathOperator{\diag}{\mathbf{diag}}
+\DeclareMathOperator{\dist}{\mathbf{dist}}
+\DeclareMathOperator{\prob}{\mathbf{prob}}
+\DeclareMathOperator{\dom}{\mathbf{dom}}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\var}{\mathbf{var}}
+\DeclareMathOperator{\quartile}{\mathbf{quartile}}
+\DeclareMathOperator{\conv}{\mathbf{conv}}
+\DeclareMathOperator{\VC}{VC}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\Ber}{Bernoulli}
+\DeclareMathOperator{\NP}{\mathbf{NP}}
+\DeclareMathOperator{\coNP}{\mathbf{coNP}}
+\DeclareMathOperator{\TIME}{\mathsf{TIME}}
+\DeclareMathOperator{\polytime}{\mathbf{P}}
+\DeclareMathOperator{\PH}{\mathbf{PH}}
+\DeclareMathOperator{\SIZE}{\mathbf{SIZE}}
+\DeclareMathOperator{\ATIME}{\mathbf{ATIME}}
+\DeclareMathOperator{\SPACE}{\mathbf{SPACE}}
+\DeclareMathOperator{\ASPACE}{\mathbf{ASPACE}}
+\DeclareMathOperator{\NSPACE}{\mathbf{NSPACE}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\EXP}{\mathbf{EXP}}
+\DeclareMathOperator{\NEXP}{\mathbf{NEXP}}
+\DeclareMathOperator{\NTIME}{\mathbf{NTIME}}
+\DeclareMathOperator{\DTIME}{\mathbf{DTIME}}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\BPP}{\mathbf{BPP}}
+\DeclareMathOperator{\ZPP}{\mathbf{ZPP}}
+\DeclareMathOperator{\RP}{\mathbf{RP}}
+\DeclareMathOperator{\coRP}{\mathbf{coRP}}
+\DeclareMathOperator{\BPL}{\mathbf{BPL}}
+\DeclareMathOperator{\IP}{\mathbf{IP}}
+\DeclareMathOperator{\PSPACE}{\mathbf{PSPACE}}
+\DeclareMathOperator{\NPSPACE}{\mathbf{NPSPACE}}
+\DeclareMathOperator{\SAT}{\mathsf{SAT}}
+\DeclareMathOperator{\NL}{\mathbf{NL}}
+\DeclareMathOperator{\PCP}{\mathbf{PCP}}
+\DeclareMathOperator{\PP}{\mathbf{PP}}
+\DeclareMathOperator{\cost}{cost}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+
+\definecolor{shadecolor}{gray}{0.95}
+
+\theoremstyle{plain}
+\newtheorem*{lem}{Lemma}
+
+\theoremstyle{plain}
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem*{answer}{Answer}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\maketitle
+
+\section{TITLE HERE}
+QUESTION HERE.
+\begin{theorem}
+THEOREM HERE.
+\end{theorem}
+\begin{shaded}
+\begin{answer}
+ANSWER HERE.
+\end{answer}
+\end{shaded}
+
+\section{TITLE HERE}
+QUESTION HERE.
+\begin{enumerate}[label*=\roman*.,ref=\roman*]
+\item QUESTION ITEM HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\item QUESTION ITEM HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\begin{equation}\label{EQU1}
+EQUATION HERE.
+\end{equation}
+\begin{equation}\label{EQU2}
+EQUATION HERE.
+\end{equation}
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\item QUESTION ITEM HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\begin{equation}\label{EQU3}
+EQUATION HERE.
+\end{equation}
+\end{proof}
+\end{answer}
+\end{shaded}
+\end{enumerate}
+\section{TITLE HERE}
+\paragraph*{
+QUESTION HERE. FIRST PARAGRAPH.
+}
+\paragraph*{
+QUESTION HERE. SECOND PARAGRAPH.
+}
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\section{TITLE HERE}
+QUESTION HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\section{TITLE HERE}
+QUESTION HERE
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\section{TITLE HERE}
+QUESTION HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+\section{TITLE HERE}
+QUESTION HERE.
+\begin{shaded}
+\begin{answer}
+\begin{proof}
+PROOF HERE.
+\end{proof}
+\end{answer}
+\end{shaded}
+
+
+\end{document} 
