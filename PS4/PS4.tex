@@ -206,7 +206,22 @@ Prove that if the two piles contain the same number of matches at the start of t
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-PROOF HERE.
+$$$$
+
+\begin{itemize}
+ \item[] {Here's a winning strategy for the second player. Suppose your opponent removes $m$ matches from one pile. You remove $m$ matches from the other pile. Let's prove that this strategy works.
+\begin{itemize}
+
+\item[] {Proof by induction on the number of matches $(n)$ in each pile.
+\textbf{Base:} If both piles contain 1 match, the first player has only one possible move: remove the last match from one pile. The second player can then remove the last match from the other pile and thereby win.
+
+\textbf{Induction:} Suppose that the second player can win any game that starts with two piles of $n$ matches, where $n$ is any value from 1 through $k$. We need to show that this is true if $n = k + 1$. So, suppose that both piles contain $k + 1$ matches. A legal move by the first player involves removing $j$ matches from one pile, 1Or, in some variations, loses. There seem to be several variations of this game.
+
+where $0 \leq j \leq k + 1$. The piles then contain $k + 1$ matches and $k + 1 − j$ matches. The second player can now remove $j$ matches from the other pile. This leaves us with two piles of $k+1−j$ matches. If $j = k+1$, then the second player wins. If $j < k + 1$, then we're now effectively at the start of a game with $k + 1 − j$ matches in each pile. Since $1 \leq k +1−j \leq k$, we know by the induction hypothesis that the second player can win the game.}
+\end{itemize}
+
+The induction step in this proof uses the fact that our claim $P(n)$ is true for a smaller value of $n$. But since we can't control how many matches the first player removes, we don't know how far back we have look in the sequence of earlier results $P(1) . . .P(k)$. Our previous proof about postage can be rewritten so as to avoid strong induction. It's less clear how to rewrite proofs like this Nim example.}
+\end{itemize}
 \end{proof}
 \end{answer}
 \end{shaded}
