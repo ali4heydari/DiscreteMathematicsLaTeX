@@ -51,16 +51,16 @@
 
 \title{
 \textsc{Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
-Discrete mathematics\\Problem Set \#2 \\
+Discrete mathematics\\Problem Set \#5 \\
 }
 \author{Ali Heydari}
 \date{\today}
 
 \lhead{Ali Heydari}
-\chead{Problem Set \#2}
+\chead{Problem Set \#5}
 \rhead{\today}
 \lfoot{}
-\cfoot{Discrete mathematics --- Winter 2018}
+\cfoot{Discrete mathematics --- Spring 2018}
 \rfoot{\thepage}
 
 \newcommand{\abs}[1]{\lvert #1 \rvert}
@@ -158,9 +158,9 @@ Discrete mathematics\\Problem Set \#2 \\
 \maketitle
 
 \section{Connected graph}
-QUESTION HERE.
+Prove the theorem blow.
 \begin{theorem}
-A graph is connected if and only if for every partition of its vertices into two nonempty sets, there
+A graph is connected if and only if for every partition of it's vertices into two nonempty sets, there
 is an edge with endpoints in both sets.
 \end{theorem}
 \begin{shaded}
@@ -170,9 +170,9 @@ ANSWER HERE.
 \end{shaded}
 
 \section{$n$-vertex graph}
-QUESTION HERE.
+Prove the theorem blow.
 \begin{theorem}
-Every n-vertex graph with at least n edges contains a cycle.
+Every $n$-vertex graph with at least $n$ edges contains a cycle.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
@@ -180,11 +180,11 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 \section{connected simple $n$-vertex graph}
-QUESTION HERE.
+Prove the theorem blow.
 \begin{theorem}
-If l, m, n are nonnegative integers with l + m = n ≥ 1, then there exists a connected simple nvertex
-graph with l vertices of even degree and m vertices of odd degree if and only if m is even,
-except for (l, m, n) = (2, 0, 2).
+If $l, m, n$ are nonnegative integers with $l + m = n \geq 1$, then there exists a connected simple $n$-vertex
+graph with $l$ vertices of even degree and $m$ vertices of odd degree if and only if $m$ is even,
+except for $(l, m, n) = (2, 0, 2)$.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
@@ -194,9 +194,10 @@ ANSWER HERE.
 
 
 
-\section{k\_cube graph}
-what is k\_cube(Qk) graph?
-Count number of its Vertices and Edges and prove that it is bipartite.
+\section{$k\_cube$ graph}
+what is $k\_cube(Qk)$ graph?
+
+Count number of it's Vertices and Edges and prove that it is bipartite.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
@@ -206,8 +207,8 @@ PROOF HERE.
 \end{shaded}
 
 \section{Diameter of graph}
-diameter of G is length of the longest path between two vertices in it.
-Show that if G’s diameter is greater than 3 its complement’s diameter would be less than 3.
+diameter of $G$ is length of the longest path between two vertices in it.
+Show that if $G$'s diameter is greater than 3 its complement's diameter would be less than 3.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
@@ -216,13 +217,8 @@ PROOF HERE.
 \end{answer}
 \end{shaded}
 
-\section{title}
-Necessary and sufficient conditions for a list d to be graphic when d consists of k copies of a and
-n − k copies of b, with a ≥ b ≥ 0. Since the degree sum must be even, the quantity k a + (n − k)b
-must be even. In addition, the inequality k a ≤ k(k − 1) + (n − k) min{k, b} must hold, since eac h
-vertex with degree b has at most min{k, b} incident edges whose other endpoint has degree a. We
-construct graphs with the desired degree sequence when these conditions hold. Note that the
-inequality implies a ≤ n − 1.
+\section{About Graph}
+Necessary and sufficient conditions for a list $d$ to be graphic when $d$ consists of $k$ copies of $a$ and $n − k$ copies of $b$, with $a \geq b \geq 0$. Since the degree sum must be even, the quantity $k$ $a + (n − k)b$ must be even. In addition, the inequality $k$ $a \leq k(k − 1) + (n − k)$ $min\{k, b\}$ must hold, since each vertex with degree $b$ has at most $min\{k, b\}$ incident edges whose other endpoint has degree $a$. We construct graphs with the desired degree sequence when these conditions hold. Note that the inequality implies $a \leq n − 1$.
 \begin{shaded}
 \begin{answer}
 \begin{proof}
@@ -232,9 +228,9 @@ PROOF HERE.
 \end{shaded}
 
 \section{Graph orientation}
-QUESTION HERE.
+Prove the theorem blow.
 \begin{theorem}
-Every graph G has an orientation such that |d +(v) − d−(v)| ≤ 1 for all v.
+Every graph $G$ has an orientation such that $|d +(v) - d-(v)| \leq 1$ for all $v$.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
@@ -243,24 +239,17 @@ ANSWER HERE.
 \end{shaded}
 
 
-\section{TITLE HERE}
-A strong orientation of a graph that has an odd cycle also has an odd (directed) cycle. Suppose
-that D is a strong orientation of a graph G that has an odd cycle v1, . . . , v2k+1. Since D is strongly
-connected, for eac h i there is a vi, vi+1-path in D. If for some i every suc h path has even length,
-then the edge between vi and vi+1 points from vi+1 to vi, since the other orientation would be a vi,
-vi+1-path of length 1 (odd). In this case, we have an odd cycle through vi and vi+1. Otherwise, we
-have a path of odd length from eac h vi to vi+1. Combining these gives a closed trail of odd length.
-In a digraph as well as in a graph (by the same proof), a closed odd trail contains the edges of an
-odd cycle
+\section{Strong orientation of a graph}
+A strong orientation of a graph that has an odd cycle also has an odd $(directed)$ cycle. Suppose that $D$ is a strong orientation of a graph $G$ that has an odd cycle $v1, \dots , v2k+1$. Since $D$ is strongly connected, for each $i$ there is a $vi, vi+1-path$ in $D$. If for some $i$ every such path has even length, then the edge between $vi$ and $vi+1$ points from $vi+1$ to $vi$, since the other orientation would be a $vi, vi+1-path$ of length 1 $(odd)$. In this case, we have an odd cycle through $vi$ and $vi+1$. Otherwise, we have a path of odd length from each $vi$ to $vi+1$. Combining these gives a closed trail of odd length In a digraph as well as in a graph (by the same proof), a closed odd trail contains the edges of an odd cycle
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{TITLE HERE}
-Tournaments with all players kings. a) If n is odd, then there is an tournament with n vertices suc
-h that every player is a king.
+\section{The Tournaments}
+Tournaments with all players kings.
+ a) If $n$ is odd, then there is an tournament with $n$ vertices such that every player is a king.
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
@@ -268,9 +257,8 @@ ANSWER HERE.
 \end{shaded}
 
 
-\section{TITLE HERE}
-For a tree T with vertex degrees in {1, k}, the possible values of n(T ) are the positive integers
-that are 2 more than a multiple of k − 1.
+\section{About Tree}
+For a tree $T$ with vertex degrees in ${1, k}$, the possible values of $n(T)$ are the positive integers that are 2 more than a multiple of $k − 1$.
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
@@ -279,8 +267,8 @@ ANSWER HERE.
 
 
 
-\section{TITLE HERE}
-QUESTION HERE.
+\section{More about Tree}
+Prove the theorems blow.
 \begin{theorem}
 A tree has exactly one center or has two adjacent centers.
 \end{theorem}
@@ -299,11 +287,11 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{TITLE HERE}
-QUESTION HERE.
+\section{Cutting edge}
+Prove the theorem blow.
 \begin{theorem}
-e = xy is a cutting edge if and only if
-a) G-e does not have ha x→y path.
+$e = xy$ is a cutting edge if and only if
+a) $G-e$ does not have ha $x \rightarrow y$ path.
 b) it does not belong to any cycle.
 \end{theorem}
 \begin{shaded}
@@ -312,29 +300,20 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{TITLE HERE}
-how many 5-cycles does peterson graph have?
-
+\section{$5-cycles$ in peterson graph}
+how many $5-cycles$ does \textbf{peterson} graph have?
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{TITLE HERE}
-A certain bridge club has a special rule to the effect thal four members may play together only if
-no two of them have previously partnered one another. At one meeting fourteen members, each of
-whom has previously partnered five others, turn up. Three games are played, and then proceedings
-come to a halt because of the club rule. Just as the members are preparing to leave, a new member,
-unknown to any of them, arrives. Show that at least on'e more g'ame can now be played..
+\section{Certain bridge club}
+A certain bridge club has a special rule to the effect that four members may play together only if no two of them have previously partnered one another. At one meeting fourteen members, each of whom has previously partnered five others, turn up. Three games are played, and then proceedings come to a halt because of the club rule. Just as the members are preparing to leave, a new member, unknown to any of them, arrives. Show that at least one more game can now be played.
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
 \end{answer}
 \end{shaded}
-
-
-
-
 
 \end{document} 
