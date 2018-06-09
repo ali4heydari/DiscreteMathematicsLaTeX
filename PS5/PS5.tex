@@ -188,7 +188,13 @@ Every $n$-vertex graph with at least $n$ edges contains a cycle.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{proof}
+\textbf{Assume:} $G$ contains no cycles. Then every connected component of $G$ is a tree.
+
+ \textbf{Claim:} The number of edges in a tree on $n$ vertices is $n-1$.
+
+Proof is by induction. The claim is obvious for $n=1$. Assume that it holds for trees on $n$ vertices. Take a tree on $n+1$ vertices. It's an easy exercise (look at a longest path in $G$) to show that a tree has at least one terminal vertex  (i.e. with degree 1). Removing this terminal vertex along with its edge, we get a tree on $n$ vertices, and induction takes us home. Hence the number of edges in a graph without cycles is $n-k$, where $k$ is the number of connected components.
+\end{proof}
 \end{answer}
 \end{shaded}
 \section{Connected simple $n$-vertex graph}
@@ -212,6 +218,10 @@ what is $k\_cube(Qk)$ graph?
 Count number of it's Vertices and Edges and prove that it is bipartite.
 \begin{shaded}
 \begin{answer}
+In graph theory, the hypercube graph $Q_n$ is the graph formed from the vertices and edges of an $n$-dimensional hypercube. For instance, the cubical graph $Q_3$ is the graph formed by the 8 vertices and 12 edges of a three-dimensional cube. $Q_n$ has $2n$ vertices, $2^{n-1}n$ edges, and is a regular graph with $n$ edges touching each vertex.\footnote{
+%\href{https://en.wikipedia.org/wiki/Hypercube_graph}{
+From Wikipedia, the free encyclopedia%}
+}
 \begin{proof}
 PROOF HERE.
 \end{proof}
