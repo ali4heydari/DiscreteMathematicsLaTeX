@@ -53,8 +53,8 @@
 \textsc{
 \center
 \includegraphics[scale=0.5]{IUST_logo_color} \\
-Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
-Department of Computer Engineering \\
+Iran university of science and technology} \\ [5pt] % Your university, school and/or department name(s)
+Department of Computer Engineering \\[8pt]
 Discrete Mathematics\\Problem Set \#5 \\
 }
 \author{Ali Heydari}
@@ -168,7 +168,16 @@ is an edge with endpoints in both sets.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{proof}
+$(\Rightarrow)$ Let $G$ is connected. Take an arbitrary partition $V (G) = X \cup Y of V (G)$ into two non-empty sets. We should show that $G$ has an edge with one endpoint in $X$ and the other in $Y$. Select vertices $x$ in $X$, and $y$ in $Y$ . (Possible because $X$ and $Y$ are non-empty.) Because $G$ is connected, there has to be a path in $G$ that joins $x$ to $y$. Denote this path as follows.
+$$x = x_0, x_1, x_2, x_3, \dots , x_n = y$$
+The first vertex $x_0$ of this path is in $X$, and the last vertex $x_n$ is in $Y$ . Any one of the others is either in $X$ or $Y$ . Suppose $i$ be the smallest index for which $x_i \in Y$ . (Such an $i$ exists, because $x_n \in Y$ , so $i$ is at most $n$.) Now we have $x_{i-1} \in X$ and $x_i \in Y$ , so $x_{i-1}x_i$
+is an edge of $G$ with one endpoint in $X$ and the other in $Y$ .
+
+$(\Leftarrow)$ Let that for any partition $V (G) = X \cup Y of V (G)$ into two non-empty sets, $G$ has an edge with one endpoint in $X$ and the other in $Y$ . We need to show $G$ is connected. For the sake of contradiction, suppose $G$ is not connected. Let $C$ be one of its components. Now we have a partition
+$$V (G) = V (C) \in (V (G) − V (C))$$
+ of $V (G)$ into two non-empty sets. By assumption, $G$ has an edge with endpoints in each set in this partition. That is to say $G$ has an edge with one endpoint in one of its components and the other endpoint in another component. Contradiction!
+ \end{proof}
 \end{answer}
 \end{shaded}
 
@@ -262,7 +271,7 @@ ANSWER HERE.
 
 
 \section{About Tree}
-For a tree $T$ with vertex degrees in ${1, k}$, the possible values of $n(T)$ are the positive integers that are 2 more than a multiple of $k − 1$.
+For a tree $T$ with vertex degrees in $\{1, k\}$, the possible values of $n(T)$ are the positive integers that are 2 more than a multiple of $k − 1$.
 \begin{shaded}
 \begin{answer}
 ANSWER HERE.
@@ -300,10 +309,10 @@ ANSWER HERE.
 \section{Cutting edge}
 Prove the theorem blow.
 \begin{theorem}
-$e = xy$ is a cutting edge if and only if
+$e =xy $ is a cutting edge if and only if
  $
 \begin{cases}
-  G-e \quad \text{does not have ha} \quad x \rightarrow y \quad \text{path}. \\
+  G-e \quad \text{does not have a} \quad x \rightarrow y \quad \text{path}. \\
 \text{it does not belong to any cycle.}
 \end{cases}
 $
