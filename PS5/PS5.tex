@@ -159,6 +159,8 @@ Discrete Mathematics\\Problem Set \#5 \\
 
 \begin{document}
 \maketitle
+\tableofcontents
+\pagebreak
 
 \section{Connected graph}
 Prove the theorem blow.
@@ -197,18 +199,7 @@ Proof is by induction. The claim is obvious for $n=1$. Assume that it holds for 
 \end{proof}
 \end{answer}
 \end{shaded}
-\section{Connected simple $n$-vertex graph}
-Prove the theorem blow.
-\begin{theorem}
-If $l, m, n$ are nonnegative integers with $l + m = n \geq 1$, then there exists a connected simple $n$-vertex
-graph with $l$ vertices of even degree and $m$ vertices of odd degree if and only if $m$ is even,
-except for $(l, m, n) = (2, 0, 2)$.
-\end{theorem}
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
+
 
 
 
@@ -218,12 +209,11 @@ what is $k\_cube(Qk)$ graph?
 Count number of it's Vertices and Edges and prove that it is bipartite.
 \begin{shaded}
 \begin{answer}
-In graph theory, the hypercube graph $Q_n$ is the graph formed from the vertices and edges of an $n$-dimensional hypercube. For instance, the cubical graph $Q_3$ is the graph formed by the 8 vertices and 12 edges of a three-dimensional cube. $Q_n$ has $2n$ vertices, $2^{n-1}n$ edges, and is a regular graph with $n$ edges touching each vertex.\footnote{
-%\href{https://en.wikipedia.org/wiki/Hypercube_graph}{
-From Wikipedia, the free encyclopedia%}
-}
+In graph theory, the hypercube graph $Q_n$ is the graph formed from the vertices and edges of an $n$-dimensional hypercube. For instance, the cubical graph $Q_3$ is the graph formed by the 8 vertices and 12 edges of a three-dimensional cube. $Q_n$ has $2n$ vertices, $2^{n-1}n$ edges, and is a regular graph with $n$ edges touching each vertex.\footnote{ \href{https://en.wikipedia.org/wiki/Hypercube_graph}{From Wikipedia, the free encyclopedia}}
 \begin{proof}
-PROOF HERE.
+There are 2 possibilities for each of the $k$ coordinates of a vertex, so there are $2k$ vertices in total. Each vertex has $k$ neighbours (why?) so the sum of the degrees of all the vertices is $k2^k$. But this counts each edge twice, so...
+
+To show that the graph is bipartite, consider the coordinate sum of a vertex. If this sum is even, what can you say about the sums for neighbouring vertices? What if the sum is odd?
 \end{proof}
 \end{answer}
 \end{shaded}
@@ -234,29 +224,16 @@ Show that if $G$'s diameter is greater than 3 its complement's diameter would be
 \begin{shaded}
 \begin{answer}
 \begin{proof}
-PROOF HERE.
-\end{proof}
-\end{answer}
-\end{shaded}
+Denote distance in $G$ by $d$ and distance in $G$' by $d$'. Define $u,v$ as you did, so that $d(u,v) \geq 4$. We wish to show for any vertices $x,y$, that $d'(x,y) \leq 2$.
 
-\section{About Graph}
-Necessary and sufficient conditions for a list $d$ to be graphic when $d$ consists of $k$ copies of $a$ and $n − k$ copies of $b$, with $a \geq b \geq 0$. Since the degree sum must be even, the quantity $k$ $a + (n − k)b$ must be even. In addition, the inequality $k$ $a \leq k(k − 1) + (n − k)$ $min\{k, b\}$ must hold, since each vertex with degree $b$ has at most $min\{k, b\}$ incident edges whose other endpoint has degree $a$. We construct graphs with the desired degree sequence when these conditions hold. Note that the inequality implies $a \leq n − 1$.
-\begin{shaded}
-\begin{answer}
-\begin{proof}
-PROOF HERE.
-\end{proof}
-\end{answer}
-\end{shaded}
+Among $x,y,u,v$ there are at most four distinct vertices. In particular, since $d(u,v) \geq 4$, $u$ and $v$ cannot be connected by a path among $x,y,u,v$. So it is possible to split $x,y,u,v$ into two components which are not connected in $G$, one containing u and one containing $v$. WLOG we may assume the components are $\{u,x\},\{v,y\}$ or $\{u,x,y\},\{v\}$.
 
-\section{Graph orientation}
-Prove the theorem blow.
-\begin{theorem}
-Every graph $G$ has an orientation such that $|d +(v) - d-(v)| \leq 1$ for all $v$.
-\end{theorem}
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
+In the first case, $x$ and $y$ have no edge in $G$, so they have an edge in $G$' and $d'(x,y)=1$.
+
+In the second case, $x$ and $y$ are both connected to $v$ in $G$', so $d'(x,y) \leq d'(x,v) + d'(y,v)=2$.
+
+Thus $d'(x,y) \leq 2$ for any $x,y$, proving that $\text{diam}G' \leq 2$.
+\end{proof}
 \end{answer}
 \end{shaded}
 
@@ -269,22 +246,17 @@ ANSWER HERE.
 \end{answer}
 \end{shaded}
 
-\section{The Tournaments}
-Tournaments with all players kings.
-
- If $n$ is odd, then there is an tournament with $n$ vertices such that every player is a king.
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
 
 
 \section{About Tree}
 For a tree $T$ with vertex degrees in $\{1, k\}$, the possible values of $n(T)$ are the positive integers that are 2 more than a multiple of $k − 1$.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+(induction on $m$, the number of vertices of degree $k$). We proof that if $T$ has $m$ vertices of degree $k$, then $n(T) = m(k -1) + 2$ If $m = 0$, then the tree must have two vertices.
+
+For the induction step, suppose that $m > 0$. For a tree $T$ with $m$ vertices of degree $k$ and the rest of degree 1, let $T'$  be the tree obtained by deleting all the leaves. The tree $T'$  is a tree whose vertices all have degree $k$ in $T$ . Let $x$ be a leaf of $T'$. In $T$ , $x$ is adjacent to one non­leaf and to $k -1$ leaves. Deleting the leaf neighbors of $x$ leaves a tree $T''$  with $m - 1$ vertices of degree k and the rest of degree 1. By the induction hypothesis, $n(T'' ) = (m -�1)(k �-1) +2$. Since we deleted $k �-1 $ vertices from $T$ to obtain $T''$, we obtain $n(T) = m(k -�1) + 2$. This completes the induction step.
+
+To prove inductively that all such values arise as the number of vertices in such a tree, we start with $K_2$ and iteratively expand a leaf into a vertex of degree $k$ to add $k - 1$ vertices.
 \end{answer}
 \end{shaded}
 
@@ -299,7 +271,27 @@ A tree has exactly one center or has two adjacent centers.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{proof}
+We will use one observation that the maximum distance $max d(v,w)$ from a given vertex $v$ to any other vertex $w$ occurs only when $w$ is pendant vertex.
+
+Now, let $T$ is a tree with $n$ vertices $(n \geq 2)$
+
+$\Rightarrow$  $T$ must have at least two pendant vertices.
+
+delete all pendant vertices from $T$, then resulting graph $T’$ is still a tree.
+
+$\Rightarrow$ eccentricity $E(v)$ in $T’$ is just one less than $E(v)$ in $T$ $\forall v$ in $T’$
+
+again delete pendant vertices from $T’$ so that resulting $T''$ is still a tree with same centers.
+
+Note that all vertices that $T$ had as centers will still remain centers in $T’ \rightarrow T'' \rightarrow T''' \rightarrow \dots $
+
+continue this process untill remaining tree has either one vertex or one edge.
+
+So at the end, if one vertex is there this implies tree $T$ has one center.
+
+If one edge is there then tree $T$ has two centers.
+\end{proof}
 \end{answer}
 \end{shaded}
 }
@@ -310,42 +302,22 @@ A tree has exactly one center if and only if its diameter is twice its radius.
 \end{theorem}
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+\begin{proof}
+  above observes that the center or pair of centers is the middle of a longest path. The diameter of a tree is the length of its longest path. The radius is the eccentricity of any center. If the diameter is even, then there is one center, and its eccentricity is half the length of the longest path. If the diameter is odd, say $2k �- 1$, then there are two centers, and the eccentricity of each is $k$, which exceeds $(2k �- 1/=2)$.
+\end{proof}
 \end{answer}
 \end{shaded}
 }
 \end{enumerate}
 
-\section{Cutting edge}
-Prove the theorem blow.
-\begin{theorem}
-$e =xy $ is a cutting edge if and only if
- $
-\begin{cases}
-  G-e \quad \text{does not have a} \quad x \rightarrow y \quad \text{path}. \\
-\text{it does not belong to any cycle.}
-\end{cases}
-$
-\end{theorem}
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
-
-\section{$5-cycles$ in peterson graph}
-how many $5-cycles$ does \textbf{peterson} graph have?
-\begin{shaded}
-\begin{answer}
-ANSWER HERE.
-\end{answer}
-\end{shaded}
-
 \section{Certain bridge club}
 A certain bridge club has a special rule to the effect that four members may play together only if no two of them have previously partnered one another. At one meeting fourteen members, each of whom has previously partnered five others, turn up. Three games are played, and then proceedings come to a halt because of the club rule. Just as the members are preparing to leave, a new member, unknown to any of them, arrives. Show that at least one more game can now be played.
 \begin{shaded}
 \begin{answer}
-ANSWER HERE.
+This problem relies on a theorem by the Hungarian mathematician Turan which says that if $G$ contains no $K_3$,  then $|EG| \leq |EB_v|$, where $v = |VG|$  and $B_v$ is a bipartite graph in which each part has as close to $\frac{v}{2}$ vertices as possible. It turns out that  $ |EB_v| = \, ^{v-k} \!  C_2 + \, ^{k+1} \!  C_2 $, where $ k = \lfloor \frac{n}{2} \rfloor $  (the integral part of $ \frac{1}{2} n $).
+
+In the problem let $G$ be the graph whose vertices are the people in the club and whose edges represent people who have not yet partnered each other. If this graph has no triangle, then when the new member arrives no game is possible.
+
 \end{answer}
 \end{shaded}
 
