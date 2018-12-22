@@ -1,0 +1,604 @@
+% IN THE NAME OF GOD
+% LaTeX Problem Set Template by Sachin Padmanabhan edited by Ali Heydari
+% I created this when I was a freshman in CS 103,
+% and I continue to use it to this day.
+%
+% Hope you enjoy!
+%
+% There may be problems with this template.
+% If so, feel free to contact me.
+%
+
+\documentclass[a4paper]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{mathdots}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage[margin=1in]{geometry}
+\usepackage{multicol}
+\usepackage{bm}
+\usepackage{listings}
+\PassOptionsToPackage{usenames,dvipsnames}{color}  %% Allow color names
+\usepackage{pdfpages}
+\usepackage{algpseudocode}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage{framed}
+\usepackage{wasysym}
+\usepackage[thinlines]{easytable}
+\usepackage{hyperref}
+\usepackage{dsfont}
+
+
+\usepackage{wrapfig}
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{0pt}
+\usepackage{subcaption}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\graphicspath{ {images/} }
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+
+\title{
+\textsc{Iran university of science and technology} \\ [25pt] % Your university, school and/or department name(s)
+Discrete mathematics\\Problem Set \#3 \\
+}
+\author{Ali Heydari}
+\date{\today}
+
+\lhead{Ali Heydari}
+\chead{Problem Set \#3}
+\rhead{\today}
+\lfoot{}
+\cfoot{Discrete mathematics --- Winter 2018}
+\rfoot{\thepage}
+
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\absfit}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+\newcommand{\eval}[3]{\left[#1\right]_{#2}^{#3}}
+\renewcommand{\(}{\left(}
+\renewcommand{\)}{\right)}
+\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\pd}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\inner}[1]{\langle#1\rangle}
+\newcommand{\cond}{\bigg|}
+\newcommand{\rank}[1]{\mathbf{rank}(#1)}
+\newcommand{\range}[1]{\mathbf{range}(#1)}
+\newcommand{\nullsp}[1]{\mathbf{null}(#1)}
+\newcommand{\repr}[1]{\left\langle#1\right\rangle}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{\mathbf{Tr}}
+\DeclareMathOperator{\diag}{\mathbf{diag}}
+\DeclareMathOperator{\dist}{\mathbf{dist}}
+\DeclareMathOperator{\prob}{\mathbf{prob}}
+\DeclareMathOperator{\dom}{\mathbf{dom}}
+\DeclareMathOperator{\E}{\mathbf{E}}
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\var}{\mathbf{var}}
+\DeclareMathOperator{\quartile}{\mathbf{quartile}}
+\DeclareMathOperator{\conv}{\mathbf{conv}}
+\DeclareMathOperator{\VC}{VC}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\Ber}{Bernoulli}
+\DeclareMathOperator{\NP}{\mathbf{NP}}
+\DeclareMathOperator{\coNP}{\mathbf{coNP}}
+\DeclareMathOperator{\TIME}{\mathsf{TIME}}
+\DeclareMathOperator{\polytime}{\mathbf{P}}
+\DeclareMathOperator{\PH}{\mathbf{PH}}
+\DeclareMathOperator{\SIZE}{\mathbf{SIZE}}
+\DeclareMathOperator{\ATIME}{\mathbf{ATIME}}
+\DeclareMathOperator{\SPACE}{\mathbf{SPACE}}
+\DeclareMathOperator{\ASPACE}{\mathbf{ASPACE}}
+\DeclareMathOperator{\NSPACE}{\mathbf{NSPACE}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\N}{\mathds{N}}
+\DeclareMathOperator{\EXP}{\mathbf{EXP}}
+\DeclareMathOperator{\NEXP}{\mathbf{NEXP}}
+\DeclareMathOperator{\NTIME}{\mathbf{NTIME}}
+\DeclareMathOperator{\DTIME}{\mathbf{DTIME}}
+\DeclareMathOperator{\poly}{poly}
+\DeclareMathOperator{\BPP}{\mathbf{BPP}}
+\DeclareMathOperator{\ZPP}{\mathbf{ZPP}}
+\DeclareMathOperator{\RP}{\mathbf{RP}}
+\DeclareMathOperator{\coRP}{\mathbf{coRP}}
+\DeclareMathOperator{\BPL}{\mathbf{BPL}}
+\DeclareMathOperator{\IP}{\mathbf{IP}}
+\DeclareMathOperator{\PSPACE}{\mathbf{PSPACE}}
+\DeclareMathOperator{\NPSPACE}{\mathbf{NPSPACE}}
+\DeclareMathOperator{\SAT}{\mathsf{SAT}}
+\DeclareMathOperator{\NL}{\mathbf{NL}}
+\DeclareMathOperator{\PCP}{\mathbf{PCP}}
+\DeclareMathOperator{\PP}{\mathbf{PP}}
+\DeclareMathOperator{\cost}{cost}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+
+\definecolor{shadecolor}{gray}{0.95}
+
+\theoremstyle{plain}
+\newtheorem*{lem}{Lemma}
+
+\theoremstyle{plain}
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem*{answer}{Answer}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{thm}{Theorem}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+
+\pagestyle{fancy}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Translating into Logic}
+
+In each of the following,
+you will be given a list of first-order predicates and functions
+along with an English sentence.
+In each case,
+write a statement in first-order logic that expresses
+the indicated sentence.
+Your statement may use any first-order construct
+(equality, connectives, quantifiers, etc.),
+but you \textbf{\textit{must}} only use the predicates, functions,
+and constants provided.
+You do not need to provide the simplest formula
+possible, though we'd appreciate it if you made an effort to do so. We \textit{\textbf{highly}} recommend reading the
+Guide to First-Order Logic Translations before starting this problem.
+\begin{enumerate}[label*=\roman*.,ref=\roman*]
+\item Given the predicate
+
+\qquad $\textit{Natural}(x)$,
+which states that $x$ is an natural number
+
+and the functions
+
+\qquad $x + y$, which represents the sum of $x$ and $y$, and
+
+\qquad $x \cdot y$, which represents the product of $x$ and $y$
+
+write a statement in first-order logic that says
+``for any $n \in \N$, $n$ is even if and only if
+$n^2$ is even.''
+
+\textit{\textcolor{blue}{Try translating this statement assuming you have a predicate Even(x). Then, rewrite your solution without
+using Even(x). Numbers aren't a part of FOL, so you can't use the number 2 in your solution.}}
+
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+\forall x Natural(x) : ( \exists Natural(y) : x = y + y \quad \Leftrightarrow \quad \exists Natural(z) : x \cdot x = z + z)
+\end{align*}
+\end{answer}
+\end{shaded}
+\item Given the predicates
+
+\qquad $\textit{Person}(p)$,
+which states that $p$ is a person;
+
+\qquad $\textit{Kitten}(k)$,
+which states that $k$ is a kitten; and
+
+\qquad $\textit{HasPet}(o, p)$,
+which states that $o$ has $p$ as a pet,
+
+write a statement in first-order logic that says
+``someone has exactly two pet kittens and no other
+pets.''
+
+\textit{\textcolor{blue}{ Make sure your formula requires that the person
+have \textit{exactly} two pet kittens; look at the lecture example of
+uniqueness as a starting point. Good questions to ask --
+is your formula false if everyone has exactly one pet
+kitten? Is it false if everyone has exactly three pet kittens? }}
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+&\exists p \, Person(p) \quad \exists x \, Kitten(x) \quad \exists y \, Kitten(y) \\
+&\Bigl((x \neq y\wedge HasPet(p,k) \wedge HasPet(p,y)) \wedge \forall z Kitten(z) (HasPet(p,z) \\
+&\Rightarrow \quad (z=x \vee z=y)) \wedge \forall j ((j \neq x) \wedge (j \neq y)) \Bigr)
+\end{align*}
+\end{answer}
+\end{shaded}
+\item The \textbf{\textit{axiom of pairing}}
+is the following statement:
+given any two distinct objects $x$ and $y$,
+there's a set containing $x$ and $y$ and nothing else.
+Given the predicates
+
+\qquad $x \in y$, which states that $x$ is an element of $y$, and
+
+\qquad $\textit{Set}(S)$, which states that $S$ is a set,
+
+write a statement in first-order logic that expresses the axiom of pairing.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+ \forall x , y \quad  \Bigl(\exists s \, Set(s) : (x \in s) \wedge (y \in s) \wedge \forall z \, (z \in s \quad \Rightarrow \quad  (z=x \vee z=y))\Bigr)
+\end{align*}
+\end{answer}
+\end{shaded}
+\item Given the predicates
+
+\qquad $x \in y$, which states that $x$ is an element of $y$, and
+
+\qquad $\textit{Set}(S)$, which states that $S$ is a set,
+
+write a statement in first-order logic that says
+``every set has a power set.''
+
+\textit{\textcolor{blue}{ As a warm-up, solve this problem assuming you have a predicate
+$X \subseteq Y$ that says that X is a subset of Y.
+Once you have that working, see if you can solve the full version of this problem. }}
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+  \forall s \, Set(s) \quad ( \exists p \, Set(p)  \quad (p \in s))
+\end{align*}
+\end{answer}
+\end{shaded}
+\item Given the predicates
+
+\qquad $\textit{Lady}(x)$, which states that $x$ is a lady;
+
+\qquad $\textit{Glitters}(x)$, which states that $x$ glitters;
+
+\qquad $\textit{SureIsGold}(x, y)$,
+which states that $x$ is sure that $y$ is gold;
+
+\qquad $\textit{Buying}(x, y)$, which states that $x$ buys $y$; and
+
+\qquad $\textit{StairwayToHeaven}(x)$,
+which states that $x$ is a Stairway to Heaven;
+
+write a statement in first-order logic that says
+``there's a lady who's sure all that glitters is gold,
+and she's buying a Stairway to Heaven.''
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+  \exists l \, Lady(l) \Bigl(\forall g Glitters(g)\wedge (SureIsGold(l,g)) \wedge \bigl(\exists x \, StairwayToHeaven(x)\wedge (Buying(l,x))\bigr)\Bigr)
+\end{align*}
+\end{answer}
+\end{shaded}
+\end{enumerate}
+
+\section{Consistent vocabulary}
+Represent the following sentences in first-order logic, using a consistent vocabulary (which you must define):
+\begin{enumerate}[label*=\alph*.,ref=\alph*]
+\item Some students took French in spring 2001.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \exists x , \exists y \quad : \quad Student(x) \wedge French(y) \wedge TakeInSpring2001(x,y)
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item Every student who takes French passes it.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \forall x , \forall y \quad : \quad \left( Student(x) \wedge French(y) \wedge Take(x,y) \right) \quad \Rightarrow \quad Pass(x,y)
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item Only one student took Greek in spring 2001.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+    \exists x , \exists y , \forall z &: \\
+ & Student(x) \wedge Greek(y) \wedge TakeInSpring2001 \\
+ &\wedge (Student(z) \wedge TakeInSpring2001(z,y) \quad \Rightarrow \quad x = z)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item The best score in Greek is always higher than the best score in French.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \forall s, \, \exists x : \, \forall y \, \, Score(x,Greek, s) > Score(y,French, s).
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item Every person who buys a policy is smart.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \forall x \quad : \quad Person(x) \wedge (\exists y : Policy(y) \wedge Buys(x,y) ) \quad \Rightarrow \quad Smart(x)
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item No person buys an expensive policy.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+  \forall x, y & : \\
+   & \quad Person(x) \wedge Policy(y)  \wedge Expensive(y) \quad \Rightarrow \quad  \neg Buys(x, y)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item There is an agent who sells policies only to people who are not insured.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+ \exists x \, : \, Agent(x) \wedge \forall y, z \,  Policy(y) \wedge Sells(x, y, z) \quad \Rightarrow \quad (Person(z)\wedge \neg Insured(z)).
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item There is a barber who shaves all men in town who do not shave themselves.
+\begin{shaded}
+\begin{answer}
+\begin{equation*}
+  \exists x \, : \, Barber(x) \wedge \forall y \, : \, Man(y) \wedge \neg Shaves(y, y) \quad \Rightarrow \quad Shaves(x, y).
+\end{equation*}
+\end{answer}
+\end{shaded}
+
+\item A person born in the UK. each of whose parents is a UK citizen or a UK resident, is a UK citizen by birth.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+  \forall x \, Person(x) \wedge Born(x,UK) \wedge (\forall y \, Parent(y, x)  &\Rightarrow  ((\exists r \, Citizen(y,UK, r)) \vee Resident(y,UK))) \\
+  &\Rightarrow \quad Citizen(x,UK,Birth).
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item A person born outside the UK, one of whose parents is a UK citizen by birth, is a UK citizen by descent.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+&\forall x \, Person(x) \wedge \neg Born(x,UK) \wedge (\exists y \, Parent(y, x) \wedge Citizen(y,UK,Birth)) \\
+& \Rightarrow \quad Citizen(x,UK,Descent).
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item Politicians can fool some of the people all of the time, and they can fool all of the people some of the time, but they can't fool all of the people all of the time.
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+  \forall x \, : \, Politician(x) & : \\
+   &\Rightarrow \quad (\exists y \, \forall t \, Person(y) \wedge Fools(x, y, t)) \wedge (\exists t \, \forall y \, Person(y) \\
+  & \Rightarrow \quad Fools(x, y, t)) \wedge \neg (\forall t \, \forall y \, Person(y) \Rightarrow \quad Fools(x, y, t))
+\end{align*}
+\end{answer}
+\end{shaded}
+
+
+\end{enumerate}
+\section{Germans}
+ Represent the sentence ``All Germans speak the same
+languages'' in predicate calculus. Use $Speaks(x,l)$, meaning that person $x$ speaks
+language $l$, and $German(y)$ , meaning that $y$ is a $German$ person.
+\begin{shaded}
+\begin{answer}
+%\begin{proof}
+\begin{equation*}
+  \forall x , y , l \quad \left(German(x) \wedge German(y) \wedge Speaks (x,l) \quad \Rightarrow \quad Speaks(y,l) \right)
+\end{equation*}
+or
+\begin{equation*}
+  \forall x , y \quad \left(German(x) \wedge German(y)   \quad \Rightarrow \quad \forall l \quad (Speaks (x,l) \quad \Leftrightarrow \quad Speaks(y,l)) \right)
+\end{equation*}
+
+%\end{proof}
+\end{answer}
+\end{shaded}
+
+\section{Jim \& Laura}
+What axiom is needed to infer the fact \textit{Female(Laura)} given the facts \textit{Male(Jim)} and \textit{Spouse(Jim, Laura)}?
+
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+\forall x , y \quad Spouse(x,y) \wedge Male(x) \quad \Rightarrow \quad Female(y)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\section{Describing the predicates}
+Write axioms describing the predicates: \textit{GrandChild, GreatGrandparent, Brother, Sister, Daughter, Son, Aunt, Uncle, BrotherInLaw, SisterInLaw} and \textit{FirstCousin}. Find out the proper definition of math cousin $n$ times removed, and write the definition in first-order logic.
+\begin{shaded}
+\begin{answer}
+$$ $$
+\begin{itemize}
+  \item $ GrandChild(a,b) \quad \Rightarrow \quad parent(b,x) \wedge parent(x,a) $
+  \item $ GreatGrandparent(a,b) \quad \Rightarrow \quad parent(a,x) \wedge GrandChild(b,x) $
+  \item The Sibling relationship is added to make the expression of some future relationships simpler. In this situation, Sibling encompasses full, half and step siblings.
+      \begin{itemize}
+        \item $ Sibling(a,b) \quad \Rightarrow \quad  parent(x,a) \wedge parent(x,b) \wedge not\_equal(a,b) $
+        \item $ Sibling(a,b) \quad \Rightarrow \quad Sibling(b,a) $
+      \end{itemize}
+  \item $Brother(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,\text{`male'})$
+  \item $Sister(a,b) \quad \Rightarrow \quad Sibling(a,b) \wedge gender(a,\text{`female'})$
+  \item $Son(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,\text{`male'})$
+  \item $ Daughter(a,b) \quad \Rightarrow \quad parent(b,a) \wedge gender(a,\text{`female'})$
+  \item $ Uncle(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,\text{`male'}) $
+  \item $ Aunt(a,b) \quad \Rightarrow \quad parent(x,b) \wedge Sibling(x,a) \wedge gender(a,\text{`female'}) $
+  \item married is a primitive relation, meaning it is not defined in terms of any other relations. It is necessary however to note that it is reflexive.
+      \begin{itemize}
+        \item $married(a,b) \quad \Rightarrow \quad married(b,a)$
+      \end{itemize}
+  \item $ BrotherInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,\text{`male'}) $
+  \item $ SisterInLaw(a,b) \quad \Rightarrow \quad married(b,x) \wedge Sibling(a,x) \wedge gender(a,\text{`female'}) $
+  \item $ FirstCousin(a,b) \quad \Rightarrow \quad parent(x,a) \wedge parent(y,b) \wedge Sibling(x,y) $
+\end{itemize}
+\end{answer}
+\end{shaded}
+
+\section{Humanoid wolf}
+Suppose you enter a forest in which a lot of people live. Anyone in this forest is either truthful or liar. (Remember that the truthful are always right and liars are always lying) In addition, some of the inhabitants of this mysterious forest are human wolves, they come in the form of terrible wolves at night and kill people and split them! In addition, any human beings can be truthful or liars.
+\begin{enumerate}[label*=\alph*.,ref=\alph*]
+
+\item Suppose you are talking to three of the forest's inhabitants. We know that exactly one of these three is humanoid wolf.A says:  ``C is a humanoid wolf''. B says: ``at least two of us are liars.'' Given these statements, determine humanoid wolf is truthful or liar?
+\begin{shaded}
+\begin{answer}
+
+\textit{Lier(x)}, which states that $x$ is a Lier.
+\textit{HumanoidWolf(x)}, which states that $x$ is a HumanoidWolf
+\begin{align*}
+&S = \{ A , B , C \} \\
+A: & \quad HumanoidWolf(C) \\
+B: & \quad \neg HumanoidWolf(B) \\
+C: & (Lier(A) \wedge Lier(B)) \vee (Lier(A) \wedge Lier(C)) \vee (Lier(B) \wedge Lier(C)) \vee (Lier(A) \wedge Lier(B) \wedge Lier(C)) \\
+\\
+&\Rightarrow
+\begin{cases}
+(\exists x \in S : HumanoidWolf(x)) \wedge \\
+ ( \forall x , y \in S : (HumanoidWolf(x) \wedge HumanoidWolf(y)) \; \Rightarrow \; x = y)  , & \mbox{if } Lier(C) \\
+ \\
+ Lier(A) \wedge Lier(B) \; \Rightarrow \; ( \neg HumanoidWolf(C) ) \wedge HumanoidWolf(B) , & \mbox{otherwise}.
+\end{cases}
+\\
+\\
+&\Rightarrow \quad HumanoidWolf(B) \wedge Lier(B) \\
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item Suppose you want to go for a long trip and want to choose from A, B and C companion for yourself. Considering the data before and considering your wife's wolf is much more important than his liar, which of these three do you prefer as your fellow?
+\begin{shaded}
+\begin{answer}
+\begin{align*}
+\forall x \in S : x \neg HumanoidWolf(x) \quad \Rightarrow \quad HumanoidWolf(C)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item We consider this issue and the next two issues of the three inhabitants of this forest, A, B and C. We know that each of them is liar or truthful. In these three issues, only two of them, A and B, speak, and C does not say anything. Of course, the word ``us'' in the words of A and B refers to all three, not just A and B. Suppose that A says: ``At least one of us is truthful'' and B says, ``At least one of us is a liar.'' We also know that at least one of them is a human being wolf. Meanwhile, neither one of them is honest nor a humanoid wolf. \\
+Do you think which on is humanoid wolf?
+\begin{shaded}
+\begin{answer}
+\begin{align}
+  A  &: \quad \exists x \in S : \quad Lier(x) \\
+  B &: \quad \exists x \in S : \quad \neg Lier(x) \\
+  Fact &: \quad \exists x \in S : \quad HumanoidWolf(x) \\
+  Fact &: \quad \exists x \in S : \quad \neg (\neg Lier(x) \wedge HumanoidWolf(x))
+  \end{align}
+  \begin{align*}
+  \\
+  \Rightarrow
+  \begin{cases}
+    \not \exists x \in S : \quad \neg Lier(x) \qquad \text{\textreferencemark}, & \mbox{if } Lier(B) \\
+    \begin{cases}
+      \not \exists x \in S : \quad Lier(x) \wedge \neg Lier(B) \text{\textreferencemark}, & \mbox{if } Lier(A) \\
+      \neg HumanoidWolf(C), & \mbox{if } Lier(C) \\
+      Lier(A) \; \text{\textreferencemark}, & \mbox{otherwise} (Lier(A) \wedge Lier(C)).
+    \end{cases}, & \mbox{otherwise}.
+  \end{cases}
+\end{align*}
+\begin{align*}
+\Rightarrow \quad  HumanoidWolf(C)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item This time, suppose A says: ``At least one of us is a liar,'' and B says, ``C is truthful''
+We also know that one and only one of these three are humanoid wolfs, and that one is also true.\\
+ Which of these three is humanoid wolf?
+\begin{shaded}
+\begin{answer}
+\begin{align}
+  A &: \quad \exists x \in S : \quad Lier(x) \\
+  B &: \quad \neg Lier(C) \\
+  Fact \label{Fact HumanoidWolf is honest} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
+\end{align}
+\begin{align*}
+    \\
+ \Rightarrow
+  \begin{cases}
+    \neg Lier(A) \; \text{\textreferencemark}, & \mbox{if } Lier(A) \\
+    \neg Lier(A) \wedge \ref{Fact HumanoidWolf is honest}, & \mbox{otherwise}.
+  \end{cases}
+ \quad \Rightarrow \quad HumaoidWolf(A)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item This time we change the conditions of the problem in such a way that A says: ``At least one of us is a liar,'' and B says: ``C is a humanoid wolf''. We also know that exactly one of them is humanoid wolf, and That's the one is truthful. \\
+Can you tell him who?
+\begin{shaded}
+\begin{answer}
+\begin{align}
+ A &:  \exists x \in S : \quad Lier(x) \\
+ B &: HumanoidWolf(C) \\
+  Fact \label{HumanoidWolf is truthful} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x)
+\end{align}
+\begin{align*}
+& \Rightarrow
+\begin{cases}
+  \neg Lier(A) \; \text{\textreferencemark}, \\
+   & \mbox{if } Lier(A) \\
+  \begin{cases}
+    Lier(C), & \mbox{if } Lier(B) \\
+    Lier(C), & \mbox{if } Lier(C) \\
+    Lier(B) \wedge Lier(C), & \mbox{otherwise}.
+  \end{cases}, & \mbox{otherwise}.
+\end{cases}
+\wedge \ref{HumanoidWolf is truthful} \quad \Rightarrow \quad HumanoidWolf(A)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\item We know that only one of A, B and C  are humanoid wolf and honest, and the other two are liars. This time only one of them says B and says: ``C is humanoid wolf''.\\
+ Who is the humanoid wolf?
+\begin{shaded}
+\begin{answer}
+\begin{align}
+ Fact \label{Fact HumanoidWolf is honest 2} &: \quad \exists x \in S : \quad (\forall y \in S : \quad HumanoidWolf(y) \quad \Leftrightarrow \quad x = y) \quad \Rightarrow \neg Lier(x) \\
+ Fact \label{There is only one lier} &: \quad \exists y , z \in S : (y , z \neq x ) \wedge Lier(y) \wedge Lier(z) \\
+ B &: \quad IsHumanoidWolf(C)
+\end{align}
+\begin{align*}
+&\Rightarrow \quad
+\begin{cases}
+  HumanoidWolf(C) \wedge \ref{There is only one lier} \; \text{\textreferencemark}, & \mbox{if } \neg Lier(B) \\
+  \neg HumaoidWolf(C) \wedge \ref{Fact HumanoidWolf is honest 2} \; \text{\textreferencemark}, & \mbox{otherwise}.
+\end{cases}
+  \quad \Rightarrow \quad HumanoidWolf(A)
+\end{align*}
+\end{answer}
+\end{shaded}
+
+\end{enumerate}
+
+\end{document} 
